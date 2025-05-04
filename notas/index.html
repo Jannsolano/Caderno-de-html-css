@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas anotações</title>
+    <link rel="shortcut icon" href="../notas/midias/Guillendesign-Variations-1-Notes-2.256.png" type="image/x-icon">
+    <link rel="stylesheet" href="./estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Minhas anotações</h1>
+        <h2>é aqui que venho caso me esqueça das funções 😅</h2>
+    </header>
+    <main>
+        <h2>Notas básicas de HTML</h2>
+        <h3>1.Introdução</h3>
+        <p>
+            Como acessamos a internet <br>
+            ()exemplo imagem <br>
+            Domínios <br>
+            GTDL: são TDL Genéricos, sem denominação de países ex: .com .net .gov .org
+            ccTDL: são denominados com códigos de países ex: .com.br .edu.us .co.fr .jp <br>
+            www.github.com/gustavoguanabara <br>    
+            imagem e denominações <br>
+            HTTPS:// é o Protocolo <br>
+            Estrutura do site <br>
+            HTML = conteúdo <br>
+            CSS = estilo <br>
+            javascript = interatividade <br>
+        </p>    
+            <pre><code>
+                &lt;!doctype html&gt;
+                &lt;html lang=”pt-br”&gt;
+                &lt;head&gt;
+                    &lt;meta charset=”UTF-8”&gt;
+                    &lt;meta name=”viewport” content=”width=Device-width, initial scale=1.0”&gt;
+                    &lt;title&gt; Meu Site &lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code></pre>
+                
+            
+            <!--
+            <p>    
+            Tags mais usadas
+            
+            <h1> a <h6> - Títulos e subtítulos
+            <p> - parágrafo
+            <img>- imagem hospedada alt=”nome da imagem” src=”pasta”
+            <link: favicon> - favicon da página
+            <strong> negrito
+            <em> - “emphasis” itálico
+            <mark> - marcar texto
+            <del> - texto rasurado, assim
+            <ins> - texto inserido faz sublinhar
+            <sub> - texto subscrito H2O
+            <sup> - texto sobrescrito x2+23
+            <code> - passar textos de código sem alteração
+            <pre><code> - exibe o texto de código com parágrafos
+            <q> - quote - citação com aspas
+            <blockquote> - citações longas em bloco
+            <bdo> - texto invertido com ‘LTR’(left to right) ou ‘RTL’(right to left)
+            <a> - linkar qualquer outra página, lembrar de sempre botar a 
+            rel=”next ou prev”
+            target=”_blank, _self, ou definida pra iframe”
+            <ol> - listas ordenadas
+            <ul> - listas não ordenadas
+            <li> - adicionar itens às listas
+            <dl> - listas de definições
+            <dt> - termo da lista
+            <dd> - descrição do termo
+            
+            entidades HTML
+            
+            &mbsp
+            &reg
+            &copy
+            &trade
+            &euro
+            &pound
+            &yen
+            &cent
+            &empty
+            &sum
+            &delta
+            &larr
+            &uarr
+            &rarr
+            &darr
+            
+            Inserindo mídias
+            
+            (imagem adaptativa)
+            <picture>
+                <source media=”(max-width:150px)” srcset=”foto.png” type=”image/png>”
+                <img src=”Foto-G.png” alt=”a imagem flexível funciona”>
+            </picture>
+            
+            type - indica o tipo de mídia
+            srcset - configura o nome da imagem quando a largura é atingida
+            media - indica o tamanho máximo configurado no srcset
+            
+            (Áudio)
+            
+            <audio>
+                <source src=”file.mp3” type=”audio/mpeg”>
+                <source src=”file.wav” type=”audio/ogg”>
+                <source src=”file.ogg” type=”image/wave>
+                <p> seu navegador não suporta o player de audio, <a href=”pasta/arquivo.mp3” download=”midia.mp3” type=”audio/mpeg> baixe aqui </a></p>
+            </audio>
+            
+            Vídeos
+            
+            <video width=”600” poster=”thumbnail.jpg” controls autoplay>
+                <source src=”video.mp4” type=”video/mp4”
+                <source src=”video.webm” type=”video/webm”>
+                <p>Seu navegador não suporta o vídeo</p>
+            </video>
+            
+            width- largura do video na tela. nesse exemplo 600px
+            poster- configura a thumbnail do vídeo
+            controls- configura o player do vídeo
+            autoplay- faz o navegador iniciar o vídeo automaticamente
+            
+            
+            CSS
+            
+            as Custom Style Sheets podem ser aplicadas no documento HTML de 3 formas
+            
+            -inline: configurações rápidas escritas na própria linha do conteúdo
+            -local: dentro do arquivo do próprio html com a tag <style> dentro do head
+            -external: com um link:css dentro do head que leva para um arquivo externo para configurações complexas no site que podem ficar extensas e deixaria o código gigante se feito localmente
+            
+            
+            início 
+            
+            @charset “UTF-8” ;
+            .
+            body {
+                background-color: RGB;
+                font-size: px ou em;
+                font-family: arial
+            
+            CORES
+            
+            color: rgba ou hsla (cor do item ou fonte)
+            background color: (cor do fundo do item)
+            
+            
+            GRADIENTE
+            
+            para fazer um gradiente utilize background-image: linear-gradient(90deg, cor) ou radial-gradient (circle, cor)
+            é possível definir a porcentagem de cada cor
+            
+            FERRAMENTAS QUE FACILITAM
+            
+            Colorzilla: extensão do chrome que capta cores no site
+            Paletton: é um site que cria testes de paletas de cores
+            Adobe Color: site que ajuda a definir uma paleta de cores 
+            
+            FONTES
+            
+            fontes serifadas: Usada mais em títulos ou pouco texto para puxar a atenção
+            fontes não serifadas: utilizada para parágrafos e textos longos
+            monoespaçadas: serve para mostrar linhas de código
+            handwriting: fontes enfeitadas como se fossem escritas á mão
+            
+            TAMANHOS
+            
+            o consórcio W3C recomenda utilizar o PX ou EM para definir o tamanho das fontes
+            font-weight:intensidade do negrito na fonte
+            font-style: italic
+            text-align: left, right, center, justify
+            
+            Fontninja é uma ferramenta do chrome que ajuda a identificar qual fonte está sendo utilizada no site
+            
+            GOOGLE FONTS
+            @import faz com que a gente possa puxar a fonte diretamente do site que nos disponibiliza
+            @font-face faz com que as fontes baixadas que estão na pasta do site, sejam reconhecidas pelo navegador com as configurações corretas, exemplo
+            font-family: ‘none’
+            src: url(‘fonte.ttf’) format (‘truetype’), url(‘fonte.otf’) format(‘opentype’);
+            
+            
+            SELETORES PERSONALIZADOS
+            
+            são formas de agrupamentos de elementos declarados no HTML e estilizados no CSS
+            
+            ID é um seletor principal. tudo que no HTML for ID, vai estar no CSS marcado com “#” (só pode ter UM elemento por página)
+            
+            exemplo no HTML
+            
+            <body>
+                <h1 id= “principal”> Título </h1>
+            </body>
+            
+            no CSS
+            
+            h1#principal {
+                color:white
+            }
+            
+            todo h1 que não tiverem o seletor “principal” irá ter uma formatação diferente, por não estar agrupado 
+            
+            CLASS
+            
+            as classes são identificadas no HTML como class, no CSS elas são identificadas como um ponto “.” sempre nomeie elas com a função que terão, para não ficar difícil de identificar o código posteriormente, exemplo no HTML:
+            
+            <body>
+                <h2 class= “destaque”> texto em destaque </h2>
+            </body>
+            
+            no CSS
+            
+            .destaque {
+                background-color: green;
+            }
+            
+            Dessa forma, tudo que for declarado com o seletor “destaque” receberá essa estilização selecionada.
+            Caso haja duplicidade no mesmo elemento, o site vai dar prioridade para o comando inline, então foco em deixar toda a estilização na página de CSS externa.
+            
+            PSEUDO CLASSES
+            
+            Uma pseudo classe é uma palavra-chave adicionada à declaração de um seletor após um símbolo de dois pontos “:” e especificam um estado especial de um elemento. Existem várias pseudo-classes para estilos, podemos citar 
+            :hover(Aplica quando o cursor do mouse passa sobre um elemento)
+            :active(Aplica quando um elemento está sendo ativamente interagido pelo usuário, como ao clicar e segurar o botão do mouse)
+            :focus (Aplica quando um elemento tem o foco, através de navegação por teclado ou clique)
+            :disabled (Aplica estilos a elementos de formulário que estão desabilitados)
+            :enabled (Aplica estilos a elementos de formulário que estão habilitados)
+            :checked (Aplica estilos a elementos de formulário como checkboxes e radio buttons que estão marcados)
+            :nth-child(n) (Seleciona um elemento que é o enésimo filho de seu elemento pai)
+            :first-child (Seleciona o primeiro filho de um elemento)
+            :last-child (Seleciona o último filho de um elemento)
+            :nth-of-type(n) (Seleciona um elemento que é o enésimo filho de seu tipo dentro de seu elemento pai)
+            :first-of-type (Seleciona o primeiro filho de um elemento de um tipo específico)
+            :last-of-type (Seleciona o último filho de um elemento de um tipo específico)
+            :only-child (Seleciona um elemento que é o único filho de seu elemento pai)
+            :only-of-type (Seleciona um elemento que é o único filho de seu tipo dentro de seu elemento pai)
+            :empty (Seleciona um elemento que não tem filhos, nem mesmo nós de texto)
+            :required (Aplica estilos a elementos de formulário que são obrigatórios)
+            :optional (Aplica estilos a elementos de formulário que não são obrigatórios)
+            :valid (Aplica estilos a elementos de formulário cujo valor é válido)
+            :invalid (Aplica estilos a elementos de formulário cujo valor é inválido)
+            :visited (Aplica estilos a links que já foram visitados pelo usuário - possui restrições de estilo por motivos de privacidade)
+            :link (Aplica estilos a links que ainda não foram visitados)
+            :lang(language) (Seleciona elementos com base no atributo lang)
+            :not(selector) (Seleciona elementos que não correspondem a um seletor especificado)
+            :root (Seleciona o elemento raiz do documento (geralmente o elemento <html>))
+            :target (Seleciona o elemento que é o alvo do URL atual (indicado por um fragmento #))
+            :default (Seleciona o elemento de formulário que é o padrão entre um grupo de elementos relacionados)
+            :indeterminate (Aplica estilos a elementos de formulário como checkboxes que não estão nem marcados nem desmarcados)
+            :in-range (Aplica estilos a elementos de entrada cujo valor está dentro de um intervalo especificado)
+            :out-of-range (Aplica estilos a elementos de entrada cujo valor está fora de um intervalo especificado)
+            :read-only (Aplica estilos a elementos que não podem ser editados pelo usuário)
+            :read-write (Aplica estilos a elementos que podem ser editados pelo usuário)
+            
+            
+            
+            PSEUDO ELEMENTOS
+            
+            Já um pseudo-elemento é uma palavra-chave adicionada às declarações de um seletor após DOIS sinais de dois pontos “::” e permitem que você formate um pedaço específico de cada elemento referenciado. 
+            Os principais pseudo elementos referenciados no CSS são:
+            
+            ::before (Insere conteúdo gerado antes do conteúdo de um elemento)
+            ::after (Insere conteúdo gerado depois do conteúdo de um elemento)
+            ::first-line (Aplica estilos à primeira linha de um bloco de texto)
+            ::first-letter (Aplica estilos à primeira letra de um bloco de texto)
+            ::placeholder (Estiliza o texto de dica (placeholder) de um campo de formulário)
+            ::marker (Estiliza os marcadores (bullets, números) de itens de lista)
+            ::selection (Aplica estilos ao texto que foi selecionado pelo usuário)
+            ::backdrop (Estiliza o fundo por trás de um elemento em tela cheia, como um vídeo ou um diálogo modal)
+            ::cue (Estiliza legendas e outras trilhas de texto para elementos de mídia como <video> e <audio>)
+            ::part() (Representa um elemento específico dentro de uma estrutura DOM shadow)
+            ::slotted() (Representa qualquer nó HTML que foi inserido em um slot dentro de um template shadow DOM)
+            
+            
+            exemplos:
+            <style>
+                a{
+                color: green;
+                }
+                
+                a:hover{
+                color: black;
+                }
+                
+                a::visited{
+                color: red;
+                }
+            dessa forma, todos os links ancorados terão por padrão a cor verde, com a pseudo-classe “hover” o site vai detectar quando passarmos o mouse sobre o link, e mudará a cor para preto(enquanto o mouse permanecer), já o pseudo-elemento, identifica qual link já foi visitado pelo usuário, e muda a cor para vermelho
+            
+            
+            CAIXAS
+            
+            EXEMPLO 
+            —---------------
+            MARGIN……
+            OUTLINE
+            ___________
+            BORDER
+            ___________
+            PADDING
+            —---------------
+            CONTEÚDO
+            
+            EXIBE ONDE FICA HEIGHT  E WIDTH*
+            TIPOS DE CAIXAS
+            
+            imagem box level
+            
+            imagem inline level
+            
+            
+            BOX LEVEL
+            tags box level são as que criam caixas e quebram a linha para continuar na próxima.
+            exemplos
+            <div> <header> <footer> <h1>-<h6> <form> <p> <article> <video> <main> <aside>
+            
+            INLINE LEVEL
+            tags inline level são as que fazem o conteúdo continuar na mesma linha sem interrupção
+            exemplos
+            <span> <a> <code> <small> <em> <sup> <input> <label> <sub> <button> <select>
+            
+            você pode realizar vários testes com as devtools ao inspecionar elemento no navegador
+            
+            *O padrão para se alinhar as arestas das caixas, é no sentido HORÁRIO a partir do TOPO.
+            exemplo:
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            o mesmo padrão serve para OUTLINE, BORDER e PADDING tbm
+            o comando Margin: AUTO centralizará a caixa na página, pois ela calcula o espaço restante entre as arestas e as bordas do espaço.
+            
+            Shorthands são propriedades com múltiplos valores simplificados em uma só linha, por exemplo:
+            
+            Border: 10px solid gray;
+                     top/right/bottom/left
+            padding: 10px 10px 10px 10px;    SE os valores são iguais, apenas colocar 10px uma vez, servirá para as 4 arestas da caixa, caso as margens da esquerda e direita sejam para centralizar, substitua os pixels pelo valor AUTO
+            
+            Margin: 20px auto 40px auto;
+            
+            Outline: 5px dashed salmon;
+            
+            utilizando  Display: block;
+                     Display: inline-block;
+            é possível transformar caixas que eram inline em block, e vice-versa
+            
+            GROUPING TAGS SEMÂNTICAS
+            Servem com a mesma função do <div>, porém com semântica.
+            <header> - cabeçalho
+            <main> - conteúdo principal
+            <footer> - rodapé do site
+            <article> - conteúdo independente
+            <aside> - conteúdo tangencial
+            <nav> - box de links navegáveis
+            <section> - Box genérica caso outra não se aplicar
+            
+            BOX-SHADOW
+            inicie testar suas sombras das caixas com a propriedade box-shadow: 1px 1px 1px black e nas devtools experimente o espalhamento da luz que melhor se encaixar, lembre de sempre manter uma transparência
+            
+            VÉRTICES ARREDONDADOS
+            Border-radius: 10px cria bordas arredondadas uniformes, mas cada borda pode ser configurada individualmente, ex: 10px 20px 30px 40px, se utilizar o valor 50% a caixa se tornará um círculo perfeito, elas também podem possuir box-shadow
+            
+            VARIÁVEIS EM CSS:
+            é uma excelente forma de organizar o esquema de cores e fontes e definir “apelidos”, e vão ajudar muito em alteração no código CSS em páginas muito longas
+            
+            para se usar
+            
+            :root {
+                -- cor0: #835E84;
+                -- cor1: #CDDB51;
+                -- cor2: #FF0B48;
+                -- fonte1: sans-serif;
+                -- fonte2: cursive;
+            }
+            
+            para ser utilizadas, basta utilizar o comando Var(--item)
+            
+            
+            GIT E GITHUB
+            
+            repositório local / repositório remoto
+            
+            GIT é um software que mantém versões dos meus sites guardados localmente
+            
+            GITHUB é um servidor que permite que meus projetos sejam salvos na nuvem, tornando o repositório remoto
+            
+            Commit é o ato de atualizar seu repositório pelas alterações feitas no seu trabalho, a cada commit, uma versão nova será criada, e poderá ser revertida
+            
+            PUSH é o ato de atualizar o repositório remoto
+            BACKGROUND IMAGE
+            para utilizar uma imagem de fundo, utilize no CSS a propriedade Background-image: url(‘imagem.jpg’) o caminho da imagem deverá ser digitado, se você utilizar “../” o visual code pode mostrar o caminho dependendo da versão
+            
+            Essas imagens de fundo podem ser empregadas dentro de CAIXAS, e também configuráveis através de seletores “id” e “classes”.
+            
+            lembre-se que o <body> é uma grande caixa
+            
+            FUNÇÃO REPEAT
+            Quando a caixa é maior que a imagem, ela se repete por padrão, mas é possível alterar
+            Background-repeat:
+            no-repeat  “sem repetição”
+            repeat “padrão”
+            repeat-x “repetir na horizontal(eixo x)”
+            repeat-y “repetir na vertical(eixo t)”
+            
+            background position
+            
+            vai ser referenciado para decidir a partir de qual parte da imagem ela vai ser ancorada pra exibição, suas posições são:
+            
+            
+            LEFT
+            TOP
+            CENTER
+            TOP
+            RIGHT
+            TOP
+            LEFT 
+            CENTER
+            CENTER
+            CENTER
+            RIGHT
+            CENTER
+            LEFT
+            BOTTOM
+            CENTER
+            BOTTOM
+            RIGHT
+            BOTTOM
+            
+            
+            BACKGROUND SIZE:
+            É usado para redimensionar a imagem para forçar a caber na caixa, por padrão ela é mostrada no seu tamanho natural. Os valores que utilizamos para alterar isso são:
+            
+            Auto (padrão)
+            a imagem de fundo fica com tamanho original
+            [ length ]px
+            redimensiona a largura e faz a altura se adaptar automaticamente
+            [ length ] %
+            também dá pra botar os dois valores e utilizar porcentagem
+            cover
+            faz a imagem ser totalmente exibida na tela, sem cortes
+            contain
+            redimensiona a imagem para cobrir o container, mesmo que corte
+            
+            
+            
+            
+            BACKGROUND-ATTACHMENT:
+            Configura o vínculo da imagem de fundo com o resto do documento, principalmente se o conteúdo for maior do que a altura da página
+            
+            scroll(padrão): a imagem vai rolar junto com o conteúdo
+            fixed: a imagem de fundo vai ficar fixada enquanto o conteúdo rola
+            
+            SHORTHANDS BACKGROUND:
+            para fazer a configuração inteira de background com imagem de forma bem resumida, faça na seguinte ordem
+            Background: color > image > position > repeat > [ size ]* > attachment
+            *até então o background-size está no manual da W3C com esse uso dado como correto, porém ainda não funciona nos navegadores, então utilize o background-size separado normalmente caso teste e não funcione.
+            
+            CENTRALIZAÇÃO VERTICAL
+            Primeiro crie uma hierarquia entre os containers.
+            
+            <div id= “fora”>
+                <div id= “dentro”>
+                </div>
+            </div>
+            
+            <style>
+                div#fora{
+                    position: relative
+                    padding: 10px
+                }
+                div#dentro{
+                position: absolute
+                top: n%
+                left: n%
+                }
+            caso coloque nos valores TOP e LEFT (50%, 50%) a página vai alinhar a caixa a partir do pixel superior esquerdo
+            mas utilizando TRANSFORM com a propriedade TRANSLATE, escolhe o pixel inicial, usando (-50%, -50%) alinhamos a caixa interna ao centro
+            
+            Ao definir o bloco interno como ABSOLUTO é possível personalizar a posição exata através de “top” e “left”, tendo como base a caixa externa
+            
+            técnicas novas:
+            text-transform: uppercase;
+            transforma todas as letras em maiúsculas
+            font-variant: small-caps;
+            todas as letras ficam maiúsculas, porém um pouco menores e as primeiras letras ficam maiores
+            
+            TABELAS EM HTML
+            “você não deve utilizar tabelas para criar a estrutura do seu site”
+            
+            hierarquia de tabelas simples
+            
+            <table> = tabela
+                <tr> = table row    linha de tabela
+                <td> = table data  dados de tabela
+            
+            exemplo:
+            <table>
+                <tr>        <- linha
+                    <td> A1    <- dado
+                    <td> B1
+                </tr>*
+            </table>
+            
+            *A W3C diz que as tags <tr> e <td> não precisam ser obrigatoriamente fechadas, mas como o visual code faz automaticamente, não há problema em deixar assim, é até recomendável.
+            
+            SE OS DADOS NÃO FOREM COLOCADOS NA HIERARQUIA CERTA, ELES SERÃO EXIBIDOS ALEATORIAMENTE FORA DE ORDEM
+            
+            o text-align: Left/ Center/ Right 
+            faz o alinhamento Horizontal dos dados
+            
+            já o vertical-align: Top/ Middle / Bottom
+            alinha os itens Verticalmente
+            
+            ANATOMIA PARA TABELAS GRANDES
+            
+            TABLE
+                THEAD
+                    TR, TD, TH
+                TBODY
+                    TR, TD, TH
+                TFOOT
+                    TR, TD, TH
+            
+            <caption>
+            cria legenda para a tabela
+            
+            <scope> = col
+            serve para identificar as colunas e facilitar a semântica para mecanismos de busca
+            
+            
+            
+            
+            EX2:
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th> XXX </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> yyy </td>
+                        </tr>
+                    </body>
+                    <tfoot>
+                        <tr>
+                            <th> XXX </th>
+                            <td> 000 </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            
+            
+            
+            EFEITO ZEBRADO:
+            basta acrescentar ao CSS das linhas <tr> o seletor :nht-child() e definir [odd] para números ímpares e [even] para números pares, (2n) também funciona
+            
+            CABEÇALHO FIXO:
+            Primeiramente a tabela precisa ser POSITION: relative
+            thead > tr > th {
+                position: sticky;
+                top: -1px;
+                background-color: gray
+            
+            use com moderação, pois ainda não funciona em todos os navegadores
+            
+            MESCLAGEM DE CÉDULAS
+            
+            É necessário apenas que algumas células não existam mais para criar um espaço em branco, e referente a ele usaremos o SPAN inline
+            rowspan=”nº” mesclagem de LINHAS, acontece VERTICALMENTE
+            colspan=”nº”
+            
+            exemplo:
+            
+            
+            
+            1
+            2
+            
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            
+            10
+            11
+            12
+            13
+            14
+            15
+            
+            
+            8: colspan=”3”
+            10: rowspan=”2”
+            
+            ESCOPOS DE GRUPOS
+            A W3C recomenda colocar escopos em TODOS os <th> para identificar os conteúdos das linhas individuais ou em grupo 
+            
+            SCOPE:
+            “COL” usado em th que separe COLUNAS no MESMO alinhamento
+            “COLGROUP” usado em th com grupos MESCLADOS no conteúdo
+            “ROW” usado em th que separa LINHAS no mesmo tr simples
+            “ROWGROUP” usado em th com linhas de conteúdo mesclado com a própria, e outros tr
+            
+            PERSONALIZANDO COLUNAS
+            Para conseguir selecionar uma coluna inteira, precisamos definir um <colgroup> dentro da tabela, logo abaixo da tag <table>
+            
+            <table>
+                <colgroup>
+                    <col class= “c1”>
+                    <col class= “c2”>
+            <col class= “c3”>
+            <col class= “c1” span= “2”>
+            </colgroup>
+            
+            Isso vai atribuir uma classe a cada coluna, (ou conjunto de colunas, quando usamos SPAN) assim podemos destacar cada coluna individualmente no CSS
+            
+            col.c1 {
+                Background-color: #E3C386;
+            }
+            col.c2 {
+                background-color: #DEA12F;
+            }
+            col.c3 {
+                background-color: #AC7C24;
+            }
+            O resultado acima se aplica devido a primeira e última <col> receberem a mesma classe configurada
+            
+            TABELAS LARGAS E RESPONSIVAS
+            
+            Para resolver a limitação de uma tabela mais larga que o previsto, basta envelopar ela dentro de uma <div> e configurar a tag no CSS com Class ou id a propriedade OVERFLOW-X: AUTO ou SCROLL, assim, todo conteúdo que transborde a página ficará contido na caixa com barra de rolagem apenas nela.
+            
+            IFRAMES
+            Os iframes são quadros ou “inline frames” são janelas abertas que já vem com uma configuração prévia, desde nos permitir vídeos no nosso HTML ou até uma página inteira
+            
+            O <iframe> vem com tamanho padrão de 300x150 px, caso alguma alteração seja feita, a configuração que irá se sobrepor a tudo, será o CSS
+            
+            Existe o parâmetro SCROLLING= “yes / no / auto” para definir se o quadro terá rolagem, mas nem todo navegador funciona.
+            
+            FRAMEBORDER
+            somente aceita os valores 0 e 1, para criar uma borda na janela, caso queira configurar a borda no iframe, utilize a função border no CSS
+            
+            GERANDO CONTEÚDO NO IFRAME
+            É possível colocar páginas locais dentro do iframe, e além do SRC, é possível utilizar o SRCDOC para gerar uma página inicial estática dentro do iframe.
+            
+            PERSONALIZANDO IFRAME VIA CSS
+            Todo iframe é uma caixa em linha, então dá pra ser personalizado com o mesmo princípio e comportamento
+            
+            iframe{
+                width= “500px”;
+                height= “500px”;
+                border= “5px solid black”;
+                border-radius= “15px”;
+                box-shadow= “3px 3px 10px #0000006C;
+            }
+            
+            DIRECIONANDO NOVO CONTEÚDO PARA IFRAME
+            Podemos fazer o iframe trocar seu conteúdo exibido utilizando links ou códigos javascript na página. O primeiro passo é dar ao iframe um nome com o parâmetro NAME.
+            
+            <iframe name=”quadro” src=”pagina01.html”>
+            <p>NAVEGADOR INCOMPATÍVEL</p>
+            </iframe>
+            
+            Dessa forma o quadro vai exibir o conteudo da pagina01.html com 300x150 px de tamanho, e em qualquer lugar do documento, pode ser criado um link que direcione o iframe
+            <a href= “pagina02.html” target= “quadro”> Abrir segundo site </a>
+            O link vai abrir a pagina02.html dentro do iframe sempre que o usuário clicar sobre, substituindo o conteúdo anterior.
+            *não confunda iframe com frames
+            
+            MEDIDAS DE SEGURANÇA
+            Sandbox é um parâmetro que ao ser utilizado, bloqueia funcionalidades do site dentro do iframe
+            não pode enviar dados de formulário
+            não pode executar scripts
+            desabilita todo tipo de API
+            desabilita todo tipo de plugin com <embed>, <object>, <applet>
+            evita o iframe de usar a navegação top level do navegador
+            bloqueia recursos como autoplay e foco automático em elementos formulário
+            
+            Para proteger seu site com um iframe controlado declare:
+            <iframe src= “teste.com” frameborder= “0” width= “400px” scrolling= “yes” sandbox= “sandbox”> </iframe>
+            
+            utilizar a propriedade sandbox com o valor sandbox vai ligar todas as propriedades citadas acima
+            
+            para abrir exceções e desbloquear alguns recursos, basta inserir os valores da lista abaixo:
+            allow-forms
+            allow-scripts
+            allow-modals
+            allow-popups
+            allow-same-origin
+            allow-top-navigation
+            
+            POLITICA DE REFERENCIA
+            
+            Ao configurar a propriedade “referrerpolicy” em um iframe, conseguimos definir quantos dados serão compartilhados. A maneira mais “anônima” de manter a navegação é usar o valor “no-refer”. 
+            Existem outros valores como:
+            
+            no-referer-when-downgrade(padrão)
+            origin
+            origin-when-cross-origin
+            same-origin
+            strict-origin
+            strict-origin-when-cross-origin
+            unsafe-URL
+            
+            Dica rápida: Box-sizing= “border box”; faz com que as bordas façam parte da caixa
+            FORMULÁRIOS
+            Os formulários que vemos normalmente na internet, são aqueles campos que você digita informação, como em telas de login
+            
+            <form>
+                nome:
+                cria caixa para texto	usado para atrelar ao label
+            v			v
+                <input type= “text”      name= “fnome”>
+            
+                cria botão formulário	nome do botão
+            v			v
+                <input type= “submit” value= “enviar”>
+            </form>
+            
+            o script acima cria o seguinte item no site
+            
+            nome:
+            ex: joão
+            
+            
+            enviar
+            
+            
+            Só essas propriedades não fazem o formulário funcionar, apenas utilizamos o <form></form> para delimitar o formulário. Tudo que estiver dentro dele é considerado conteúdo dos campos.
+            
+            adicionar dois atributos importantes na tag <form>: o method e o action. O method indica o método de envio dos dados, e o action diz para onde os dados serão enviados.
+            Para dar ligação semântica entre a caixa de texto ao identificador adicione <label> para relacionar ambos.
+            para <label> funcionar corretamente, a caixa de texto deve ter um id.
+            
+            Depois dessas alterações, teremos o novo código:
+            
+            <form method= “get” action= “cadastro.php”>
+                <label for= “camponome”>nome:</label>
+                <input type= “text” name= “fnome” id= “camponome”>
+                <input type= “submit” value= “enviar”>
+            
+            O resultado visual continua o mesmo, mas agora o formulário é semântico e o navegador vai conseguir relacionar os itens e enviar os dados para o lugar certo.
+            
+            escolhemos no LABEL se o script de programação vai ser rodado identificando pelo NAME ou pelo ID nesse curso usaremos mais o ID.
+            
+            METHOD GET & POST
+            
+            O método GET faz com que os valores que você digitou no formulário apareça na url do navegador, ele condensa os dados digitados e envia como parte do endereço acessado. POSSUI O LIMITE DE 3000 BYTES
+            
+            Já o método POST irá pegar todos os dados digitados e enviar diretamente no corpo da requisição HTTP, assim os dados não irão aparecer na URL 
+            
+            *mas ainda podem ser vistos nas DEVTOOLS na aba network escolhendo o arquivo ACTION, no nosso caso “cadastro.php” indo na aba headers e indo na seção form data nos mostrará os dados inseridos.
+            
+            PARÂMETROS NOVOS DE FORMULÁRIO
+            <form> autocomplete= on/off - habilita o navegador a completar o campo
+            
+            <input>
+            type= text - cria uma caixa de texto
+            type= password - cria uma caixa de senha com censura padrão
+            type= number - cria uma caixa de números
+            type= radio - cria botões de marcação única
+            type= email - cria caixa para inserir email
+            type= range - cria uma barra de nível selecionável
+            type= reset - cria um botão que apaga todos os dados inseridos na página
+            type= color - cria uma caixa de seleção de cor
+            type= submit - cria um botão que envia os dados
+            type= tel - cria uma caixa para inserir telefone
+            type= checkbox - cria uma caixa de confirmação
+            type= date - cria uma caixa de inserir data
+            type= time - cria uma caixa para inserir hora
+            type= month - cria uma caixa de inserir mês
+            type= button - cria uma caixa de botão
+            type= file - cria um botão para inserir arquivo
+            type= image - permite criar um botão personalizado com src e/ou alt
+            type= url - cria um campo para inserir endereços de site
+            type= search - cria uma barra de pesquisa
+            type= datetime-local - cria uma caixa interativa para inserir data e hora
+            type= week - cria uma caixa para inserir semanas
+            type= hidden - cria um campo de entrada escondido do usuário, pode conter informações complexas, passar valores pré definidos, tokens de segurança, etc.
+            
+            PARÂMETROS DE CONFIGURAÇÃO DE INPUT
+            
+            placeholder= “texto” - cria um texto de dica dentro da caixa antes da entrada de texto do usuário
+            required - torna o campo obrigatório
+            readonly - impede edição de valor
+            disabled - desativa o campo e impede alteração
+            maxlength= “num” -  limita o número máximo de caracteres
+            minlength= “num” - define o mínimo de caracteres
+            min= “num/data” - valor mínimo para inputs de números ou data
+            max= “num/data” - valor máximo permitido para números ou datas
+            step= “nº” - define intervalo de incremento para valores numéricos
+            pattern= “expressão regular” - define padrão de validação para entrada
+            autofocus= “autofocus” - faz o campo receber foco ao carregar a página
+            multiple = “multiple” - permite múltiplos arquivos em inputs tipo “FILE” ou múltiplos emails
+            size= “nº” - define a largura do campo em caracteres visíveis
+            list= “id de um <datalist>” - associa uma lista de sugestões de entrada de campo
+            spellcheck= “true/false” - habilita/desabilita verificação ortográfica
+            dir= “ltr/rtl” - define a direção do texto
+            inputmode= “text/email/numeric/tel/etc.” - sugere ao navegador o tipo de teclado ideal
+            value - permite pré definir um valor
+            
+            TAG <fieldset> e <legend>
+            A tag <fieldset> consegue agrupar todos os campos que eu quiser dentro do formulário, com uma borda, e ao usar a tag <legend> eu crio um título bem no início da borda
+        </p>
+        -->
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
