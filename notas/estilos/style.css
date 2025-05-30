@@ -39,3 +39,14 @@ p, br {
     padding: 15px;
     
 }
+
+table{
+    border: 1px solid white;
+    padding: 5px;
+    margin: 5px;
+}
+
+aside{
+    padding: 5px;
+    margin: 5px;
+}
