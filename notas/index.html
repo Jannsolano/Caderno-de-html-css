@@ -64,7 +64,7 @@
             <aside><code>&lt;a href="destino.html"&gt;Exemplo de link&lt;/a&gt;</code></aside>
             <small>lembrar de definir abertura de tag, parâmetro no href, valor no destino, conteúdo no que estiver dentro, e fechamento de tag, com setas ou indicativos*</small>
         </p>
-        <h4>4.Seletores CSS</h4>
+        <h3>4.Seletores CSS</h3>
         <p>normalmente é assim a estrutura de uma configuração de CSS</p> 
         <pre><code>
             seletor p {
@@ -74,7 +74,7 @@
                         propriedade valor
                         }
         </code></pre>   
-        <h4>5.entidades HTML</h4>
+        <h3>5.entidades HTML</h3>
         <table>
             <tr>
                 <th>símbolo</th>
@@ -156,10 +156,9 @@
                 <td>Seta baixo</td>
                 <td>& darr;</td>
             </tr>
-        </table>
-        <p>    
-            Tags mais usadas: <br>
-            
+        </table>    
+        <h3>6.Tags mais usadas em HTML</h3>
+        <p>     
             &lt;h1&gt; a &lt;h6&gt; - Títulos e subtítulos <br>
             &lt;p&gt; - parágrafo <br>
             &lt;img&gt;- imagem hospedada alt=”nome da imagem” src=”pasta” <br>
@@ -185,99 +184,217 @@
             &lt;dt&gt; - termo da lista <br>
             &lt;dd&gt; - descrição do termo <br>
         </p>
-            
-                <!--
-            entidades HTML
-            
-            &mbsp
-            &reg
-            &copy
-            &trade
-            &euro
-            &pound
-            &yen
-            &cent
-            &empty
-            &sum
-            &delta
-            &larr
-            &uarr
-            &rarr
-            &darr
-            
-            Inserindo mídias
-            
-            (imagem adaptativa)
-            <picture>
-                <source media=”(max-width:150px)” srcset=”foto.png” type=”image/png>”
-                <img src=”Foto-G.png” alt=”a imagem flexível funciona”>
-            </picture>
-            
-            type - indica o tipo de mídia
-            srcset - configura o nome da imagem quando a largura é atingida
+        <h3>7.inserindo mídias</h3>
+        <h4>imagens</h4>
+        <p>
+            Caso queira inserir imagens, pode seguir esse simples modelo no HTML
+        </p>
+        <pre><code>
+            &lt;h1&gt;Testando carga de Imagens&lt;/h1&gt;
+            &lt;p&gt;Abaixo você vai ver uma imagem que está na mesma pasta.&lt;/p&gt;
+            &lt;img src="logo-html.png" alt="Logo do HTML5"&gt;
+            &lt;p&gt;Podemos também carregar imagens que estão em outra pasta, contanto que ela esteja dentro da pasta <br> atual.&lt;/p&gt;
+            &lt;img src="fotos/logo-css.png" alt="Logo das CSS3"&gt;
+            &lt;p&gt;Também podemos carregar imagens externas, e para isso devemos ter a sua URL completa.&lt;/p&gt;
+            &lt;img src="https://www.jsdotgit.com/js-small.gif" alt="Logo de JavaScript"&gt;
+        </code></pre>
+        <!--<p>O código acima irá gerar o seguinte resultado:</p>-->
+        <p>
+            Caso queira criar uma imagem adaptativa, experimente ter a mesma imagem em diferentes tamanhos na pasta com nomes diferentes, e colocar uma condição pra que elas sejam mostradas ao usuário, como largura da tela por exemplo
+        </p>
+        <pre>
+            <code>
+                &lt;picture&gt;
+                    &lt;source media=”(max-width:150px)” srcset=”foto.png” type=”image/png”&gt;
+                    &lt;img src=”Foto-G.png” alt=”a imagem flexível funciona”&gt;
+                &lt;/picture&gt;
+            </code>
+        </pre>        
+        <p>
+            Ainda se tratando de imagem, lembre-se: <br>
+            type - indica o tipo de mídia <br>
+            srcset - configura o nome da imagem quando a largura é atingida <br>
             media - indica o tamanho máximo configurado no srcset
-            
-            (Áudio)
-            
-            <audio>
-                <source src=”file.mp3” type=”audio/mpeg”>
-                <source src=”file.wav” type=”audio/ogg”>
-                <source src=”file.ogg” type=”image/wave>
-                <p> seu navegador não suporta o player de audio, <a href=”pasta/arquivo.mp3” download=”midia.mp3” type=”audio/mpeg> baixe aqui </a></p>
-            </audio>
-            
-            Vídeos
-            
-            <video width=”600” poster=”thumbnail.jpg” controls autoplay>
-                <source src=”video.mp4” type=”video/mp4”
-                <source src=”video.webm” type=”video/webm”>
-                <p>Seu navegador não suporta o vídeo</p>
-            </video>
-            
-            width- largura do video na tela. nesse exemplo 600px
-            poster- configura a thumbnail do vídeo
-            controls- configura o player do vídeo
+        </p>
+        <h4>Áudios</h4>
+        <p>
+            para inserir áudios, basta seguir o exemplo abaixo para cada formato
+        </p>
+        <pre><code>
+            &lt;audio&gt;
+                &lt;source src=”file.mp3” type=”audio/mpeg”&gt;
+                &lt;source src=”file.wav” type=”audio/ogg”&gt;
+                &lt;source src=”file.ogg” type=”image/wave&gt;
+                &lt;p> seu navegador não suporta o player de audio, <br> &lt;a href=”pasta/arquivo.mp3” download=”midia.mp3” type=”audio/mpeg&gt; baixe aqui &lt;/a&gt;&lt;/p&gt;
+            &lt;/audio&gt;
+        </code></pre>
+        <h4>Vídeos</h4>
+        <p>já para adicionar vídeos ao conteúdo da HTML, basta escolher a source e sua largura</p>
+        <pre><code>
+             &lt;video width=”600” poster=”thumbnail.jpg” controls autoplay&gt;
+                &lt;source src=”video.mp4” type=”video/mp4”&gt;
+                &lt;source src=”video.webm” type=”video/webm”&gt;
+                &lt;p&gt;Seu navegador não suporta o vídeo&lt;/p&gt;
+            &lt;/video&gt;
+        </code></pre>
+        <p>
+            outras configurações que podem ser feitas no vídeo são: <br>
+            width- largura do video na tela. nesse exemplo 600px <br>
+            poster- configura a thumbnail do vídeo <br>
+            controls- configura o player do vídeo <br>
             autoplay- faz o navegador iniciar o vídeo automaticamente
-            
-            
-            CSS
-            
-            as Custom Style Sheets podem ser aplicadas no documento HTML de 3 formas
-            
-            -inline: configurações rápidas escritas na própria linha do conteúdo
-            -local: dentro do arquivo do próprio html com a tag <style> dentro do head
-            -external: com um link:css dentro do head que leva para um arquivo externo para configurações complexas no site que podem ficar extensas e deixaria o código gigante se feito localmente
-            
-            
-            início 
-            
-            @charset “UTF-8” ;
-            .
+        </p>
+        <h3>8.CSS</h3>
+        <p>
+            as Custom Style Sheets podem ser aplicadas no documento HTML de 3 formas:
+        </p>
+        <ul>
+            <li>inline: configurações rápidas escritas na própria linha do conteúdo</li>
+            <li>local: dentro do arquivo do próprio html com a tag &lt;style&gt; dentro do head</li>
+            <li>
+            external: com um link:css dentro do head que leva para um arquivo externo para configurações complexas no site que podem ficar extensas e deixaria o código gigante se feito localmente
+            </li>
+        </ul>
+        <p>
+            para iniciar as nossas primeiras confugurações de CSS podemos criar uma página nova de css e colocar a seguinte configuração:
+        </p>
+
+        <pre><code>
             body {
                 background-color: RGB;
                 font-size: px ou em;
                 font-family: arial
-            
-            CORES
-            
+            }
+        </code></pre>
+
+        <h4>Cores</h4>
+        <p>
             color: rgba ou hsla (cor do item ou fonte)
             background color: (cor do fundo do item)
-            
-            
-            GRADIENTE
-            
+        </p>
+        <h4>Gradiente</h4>
+        <p>
             para fazer um gradiente utilize background-image: linear-gradient(90deg, cor) ou radial-gradient (circle, cor)
             é possível definir a porcentagem de cada cor
-            
-            FERRAMENTAS QUE FACILITAM
-            
-            Colorzilla: extensão do chrome que capta cores no site
-            Paletton: é um site que cria testes de paletas de cores
-            Adobe Color: site que ajuda a definir uma paleta de cores 
-            
+        </p>
+        <h4>Ferramentas que facilitam</h4>
+        <ul>
+            <li>Colorzilla: extensão do chrome que capta cores no site</li>
+            <li>Paletton: é um site que cria testes de paletas de cores</li>
+            <li>Adobe Color: site que ajuda a definir uma paleta de cores</li>
+        </ul>
+
+        <h3>9.listas</h3>
+        <p>
+            para criar listas Ordenadas vamos usar a tag &lt;ol&gt; para delimitar a lista e &lt;li&gt;(list item) para identificar cada item da lista.    <br>
+            para criar uma lista não ordenada, basta utilizar a tag &lt;ul&gt;
+        </p>
+        <p>
+            para estilizar os marcadores dos itens, basta colocar o seletor: 
+        </p>
+        <h4>Em listas ordenadas</h4>
+        <ul>
+            <li>type=1 - valor padrão, cria listas numeradas</li>
+            <li>type=A - cria listas alfabéticas maiúsculas</li>
+            <li>type=a - cria listas alfabéticas minúsculas</li>
+            <li>type=I - cria listas com algarismos romanos em maiúsculas</li>
+            <li>type=i - cria listas com algarismos romanos em minúsculas</li>
+        </ul>
+        <p>
+            Podemos ainda escolher o número que a lista inicia, se colocarmos após o type=1 o parâmetro start=3
+        </p>
+        <h4>Em listas não ordenadas</h4>
+        <ul>
+            <li>type=disc - padrão. Uma bola preta totalmente pintada</li>
+            <li>type=circle - uma bola com uma borda preta e sem preenchimento</li>
+            <li>type=square - um pequeno quadrado preto totalmente pintado</li>
+        </ul>
+        <h4>Listas de definição</h4>
+        <p>
+            é como em um dicionário, criamos uma lista com termos e descrições <br>
+            exemplo:
+        </p>
+        <pre><code>
+            &lt;dl&gt;
+                &lt;dt&gt;HTML&lt;/dt&gt;
+                &lt;dd&gt;Linguagem de marcação utilizada para criar o conteúdo de sites.&lt;/dd&gt;
+
+                &lt;dt&gt;CSS&lt;/dt&gt;
+                &lt;dd&gt;Linguagem de marcação para a especificação de estilos em sites&lt;/dd&gt;
+
+                &lt;dt&gt;JavaScript&lt;/dt&gt;
+                &lt;dd&gt;Linguagem de programação para criar interatividades em sites.&lt;/dd&gt;
+            &lt;/dl&gt;
+        </code></pre>
+        <p>
+            dessa forma o site irá mostrar como resultado da seguinte forma
+        </p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Linguagem de marcação utilizada para criar o conteúdo de sites.</dd>
+            <dt>CSS</dt>
+            <dd>Linguagem de marcação para a especificação de estilos em sites</dd>
+            <dt>JavaScript</dt>
+            <dd>Linguagem de programação para criar interatividades em sites.</dd>
+        </dl>
+        <h3>10.Ancoragens</h3>
+        <p>
+            Para criar um hyperlink, devemos criar âncoras através da tag &lt;a&gt;. O principal atributo dessa tag é o <em>href</em>, que cria uma referência hipertexto. Vejamos um exemplo simples:
+        </p>
+        <pre><code>
+            &lt;h1&gt;Vamos criar um link&lt;/h1&gt;
+            &lt;a href="https://gustavoguanabara.github.io"&gt;Acesse meu perfil Github&lt;/a&gt;
+        </code></pre>
+        <p>
+            temos uma série de atributos bons para se incluir na tag de âncora como o hreflang="en" que indica qual é o idioma principal do site para onde o link está desviando o fluxo de navegação.
+        </p>
+        <h4>também temos parâmetros para o atributo <em>target</em> como:</h4>
+        <ul>
+            <li>_blank vai abrir o link em uma nova janela em branco</li>
+            <li>_self vai abrir o link na janela ou frame atual(padrão)</li>
+            <li>_top vai desfazer todos os frames e abrir o destino no navegador completo</li>
+            <li>_parent similar ao uso do _top em uma referência à janela mãe</li>
+            <li>nome-do-frame caso esteja usando frames, indicar o nome da janela a abrir</li>
+        </ul>
+        <h4>Ainda existe o atributo <em>rel</em> que indica qual é a natureza dos links referenciados</h4>
+        <ul>
+            <li><em>next</em> indica que o link é para a próxima parte do documento autal</li>
+            <li><em>prev</em> indica que o link é para a parte anterior do documento atual</li>
+            <li><em>author</em> indica que é um link para o site do autor do artigo atual</li>
+            <li><em>external</em> indica que é um link para outro site que nao faz parte do site atual</li>
+            <li><em>nofollow</em> indica que é um link para um site não endossado, como um link pago</li>
+        </ul>
+        <h4>e para fazer downloads? basta seguir a lista dos media types mais utilizados</h4>
+        <p>
+            experimente utilizar da seguinte forma de exemplo
+        </p>
+        <code>
+            &lt;a href="arquivos/meulivro.pdf" download="meulivro.pdf" type="application/pdf"
+        </code>
+        <h4>media types</h4>
+        <ul>
+            <li><em>application</em>/zip</li>
+            <li><em>text</em>/html</li>
+            <li><em>text</em>/css</li>
+            <li><em>text</em>/javascript</li>
+            <li><em>video</em>/mp4</li>
+            <li><em>video</em>/H264</li>
+            <li><em>video</em>/JPEG</li>
+            <li><em>audio</em>/aac</li>
+            <li><em>audio</em>/mpeg</li>
+            <li><em>font</em>/ttf</li>
+            <li><em>image</em>jpeg</li>
+            <li><em>image</em>png</li>
+        </ul>
+        <h3>11.Fontes</h3>
+        <ul>
+            <li>fontes serifadas: Usada mais em títulos ou pouco texto para puxar a atenção</li>
+            <li>fontes não serifadas: utilizada para parágrafos e textos longos</li>
+            <li>monoespaçadas: serve para mostrar linhas de código</li>
+            <li>handwriting: fontes enfeitadas como se fossem escritas á mão</li>
+        </ul>
+        <!--
             FONTES
-            
-            fontes serifadas: Usada mais em títulos ou pouco texto para puxar a atenção
             fontes não serifadas: utilizada para parágrafos e textos longos
             monoespaçadas: serve para mostrar linhas de código
             handwriting: fontes enfeitadas como se fossem escritas á mão
@@ -322,9 +439,9 @@
             
             as classes são identificadas no HTML como class, no CSS elas são identificadas como um ponto “.” sempre nomeie elas com a função que terão, para não ficar difícil de identificar o código posteriormente, exemplo no HTML:
             
-            <body>
-                <h2 class= “destaque”> texto em destaque </h2>
-            </body>
+            &lt;body&gt;
+                &lt;h2 class= “destaque”&gt; texto em destaque &lt;/h2&gt;
+            &lt;/body&gt;
             
             no CSS
             
