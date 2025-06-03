@@ -35,6 +35,13 @@ main {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
+h3 {
+    background-color: var(--cor03);
+    padding: 4px;
+    margin: 2px;
+    border-radius: 3px;
+}
+
 p, br {
     padding: 15px;
     
