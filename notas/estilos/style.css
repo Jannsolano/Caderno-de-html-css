@@ -47,6 +47,11 @@ p, br {
     
 }
 
+ul, ol {
+    margin: 5px;
+    padding: 15px;
+}
+
 table{
     border: 1px solid white;
     padding: 5px;
@@ -56,4 +61,15 @@ table{
 aside{
     padding: 5px;
     margin: 5px;
+}
+
+div.excaixa {
+    display: block;
+    height: 170px;
+    width: 170px;
+    margin: 20px auto; 
+    outline: 20px solid rgba(128, 128, 128, 0.418);
+    border: 20px solid white;
+    padding: 20px dashed green;
+
 }

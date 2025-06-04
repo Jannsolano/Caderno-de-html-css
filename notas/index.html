@@ -393,122 +393,135 @@
             <li>monoespaçadas: serve para mostrar linhas de código</li>
             <li>handwriting: fontes enfeitadas como se fossem escritas á mão</li>
         </ul>
-        <!--
-            FONTES
-            fontes não serifadas: utilizada para parágrafos e textos longos
-            monoespaçadas: serve para mostrar linhas de código
-            handwriting: fontes enfeitadas como se fossem escritas á mão
-            
-            TAMANHOS
-            
-            o consórcio W3C recomenda utilizar o PX ou EM para definir o tamanho das fontes
-            font-weight:intensidade do negrito na fonte
-            font-style: italic
-            text-align: left, right, center, justify
-            
+        <h4>Tamanhos</h4>
+        <p>
+            O consórcio W3C recomenda utilizar o <em>px</em> ou <em>em</em> para definir o tamanho das fontes
+        </p>
+        <ul>
+            <li>font-weight:intensidade do negrito na fonte</li>
+            <li>font-style: italic</li>
+            <li>text-align: left, right, center, justify</li>
+        </ul>
+        <h4>E o que posso usar pra me ajudar?</h4>
+        <p>
             Fontninja é uma ferramenta do chrome que ajuda a identificar qual fonte está sendo utilizada no site
-            
+        </p>
+        <p>
             GOOGLE FONTS
             @import faz com que a gente possa puxar a fonte diretamente do site que nos disponibiliza
-            @font-face faz com que as fontes baixadas que estão na pasta do site, sejam reconhecidas pelo navegador com as configurações corretas, exemplo
-            font-family: ‘none’
-            src: url(‘fonte.ttf’) format (‘truetype’), url(‘fonte.otf’) format(‘opentype’);
-            
-            
-            SELETORES PERSONALIZADOS
-            
-            são formas de agrupamentos de elementos declarados no HTML e estilizados no CSS
-            
+            @font-face faz com que as fontes baixadas que estão na pasta do site, sejam reconhecidas pelo navegador com as configurações corretas
+        </p>
+        <h4>Exemplo</h4>
+        <pre><code>
+            font-family: ‘none’ src: url(‘fonte.ttf’) format (‘truetype’), url(‘fonte.otf’) format(‘opentype’);
+        </code></pre>
+        <h3>12.Seletores Personalizados</h3>
+        <p>
+            São formas de agrupamentos de elementos declarados no HTML e estilizados no CSS
+        </p>
+        <p>
             ID é um seletor principal. tudo que no HTML for ID, vai estar no CSS marcado com “#” (só pode ter UM elemento por página)
-            
-            exemplo no HTML
-            
-            <body>
-                <h1 id= “principal”> Título </h1>
-            </body>
-            
-            no CSS
-            
+        </p>
+        <h4>Exemplo no HTML</h4>
+        <pre><code>
+            &lt;body&gt;
+                &lt;h1 id= “principal”&gt; Título &lt;/h1&gt;
+            &lt;/body>
+        </code></pre>
+        <h4>No CSS</h4>
+        <pre><code>
             h1#principal {
                 color:white
             }
-            
-            todo h1 que não tiverem o seletor “principal” irá ter uma formatação diferente, por não estar agrupado 
-            
-            CLASS
-            
-            as classes são identificadas no HTML como class, no CSS elas são identificadas como um ponto “.” sempre nomeie elas com a função que terão, para não ficar difícil de identificar o código posteriormente, exemplo no HTML:
-            
+        </pre></code>
+        <p>
+            Com isso, todo h1 que não tiverem o seletor “principal” irá ter uma formatação diferente, por não estar agrupado
+        </p>
+        <h4>Classes(CLASS)</h4>
+        <p>
+            Já as classes são identificadas no HTML como class, no CSS elas são identificadas como um ponto “.” sempre nomeie elas com a função que terão, para não ficar difícil de identificar o código posteriormente, exemplo no HTML:
+        </p>
+        <h5>CLASS</h5>
+        <pre><code>
             &lt;body&gt;
                 &lt;h2 class= “destaque”&gt; texto em destaque &lt;/h2&gt;
             &lt;/body&gt;
-            
-            no CSS
-            
+        </code></pre>
+        <h5>No CSS</h5>
+        <pre><code>
             .destaque {
                 background-color: green;
             }
-            
+        </code></pre>
+        <p>
             Dessa forma, tudo que for declarado com o seletor “destaque” receberá essa estilização selecionada.
+        </p>
+        <p>
             Caso haja duplicidade no mesmo elemento, o site vai dar prioridade para o comando inline, então foco em deixar toda a estilização na página de CSS externa.
-            
-            PSEUDO CLASSES
-            
-            Uma pseudo classe é uma palavra-chave adicionada à declaração de um seletor após um símbolo de dois pontos “:” e especificam um estado especial de um elemento. Existem várias pseudo-classes para estilos, podemos citar 
-            :hover(Aplica quando o cursor do mouse passa sobre um elemento)
-            :active(Aplica quando um elemento está sendo ativamente interagido pelo usuário, como ao clicar e segurar o botão do mouse)
-            :focus (Aplica quando um elemento tem o foco, através de navegação por teclado ou clique)
-            :disabled (Aplica estilos a elementos de formulário que estão desabilitados)
-            :enabled (Aplica estilos a elementos de formulário que estão habilitados)
-            :checked (Aplica estilos a elementos de formulário como checkboxes e radio buttons que estão marcados)
-            :nth-child(n) (Seleciona um elemento que é o enésimo filho de seu elemento pai)
-            :first-child (Seleciona o primeiro filho de um elemento)
-            :last-child (Seleciona o último filho de um elemento)
-            :nth-of-type(n) (Seleciona um elemento que é o enésimo filho de seu tipo dentro de seu elemento pai)
-            :first-of-type (Seleciona o primeiro filho de um elemento de um tipo específico)
-            :last-of-type (Seleciona o último filho de um elemento de um tipo específico)
-            :only-child (Seleciona um elemento que é o único filho de seu elemento pai)
-            :only-of-type (Seleciona um elemento que é o único filho de seu tipo dentro de seu elemento pai)
-            :empty (Seleciona um elemento que não tem filhos, nem mesmo nós de texto)
-            :required (Aplica estilos a elementos de formulário que são obrigatórios)
-            :optional (Aplica estilos a elementos de formulário que não são obrigatórios)
-            :valid (Aplica estilos a elementos de formulário cujo valor é válido)
-            :invalid (Aplica estilos a elementos de formulário cujo valor é inválido)
-            :visited (Aplica estilos a links que já foram visitados pelo usuário - possui restrições de estilo por motivos de privacidade)
-            :link (Aplica estilos a links que ainda não foram visitados)
-            :lang(language) (Seleciona elementos com base no atributo lang)
-            :not(selector) (Seleciona elementos que não correspondem a um seletor especificado)
-            :root (Seleciona o elemento raiz do documento (geralmente o elemento <html>))
-            :target (Seleciona o elemento que é o alvo do URL atual (indicado por um fragmento #))
-            :default (Seleciona o elemento de formulário que é o padrão entre um grupo de elementos relacionados)
-            :indeterminate (Aplica estilos a elementos de formulário como checkboxes que não estão nem marcados nem desmarcados)
-            :in-range (Aplica estilos a elementos de entrada cujo valor está dentro de um intervalo especificado)
-            :out-of-range (Aplica estilos a elementos de entrada cujo valor está fora de um intervalo especificado)
-            :read-only (Aplica estilos a elementos que não podem ser editados pelo usuário)
-            :read-write (Aplica estilos a elementos que podem ser editados pelo usuário)
-            
-            
-            
-            PSEUDO ELEMENTOS
-            
+        </p>
+        <h4>Pseudo Classes</h4>
+        <p>
+            Uma pseudo classe é uma palavra-chave adicionada à declaração de um seletor após um símbolo de dois pontos “:” e especificam um estado especial de um elemento.
+        </p>
+        <p>
+            Existem várias pseudo-classes para estilos, podemos citar dentre elas:
+        </p>
+        <ul>
+            <li>:hover(Aplica quando o cursor do mouse passa sobre um elemento)</li>
+            <li>:active(Aplica quando um elemento está sendo ativamente interagido pelo usuário, como ao clicar e segurar o botão do mouse)</li>
+            <li>:focus (Aplica quando um elemento tem o foco, através de navegação por teclado ou clique)</li>
+            <li>:disabled (Aplica estilos a elementos de formulário que estão desabilitados)</li>
+            <li>:enabled (Aplica estilos a elementos de formulário que estão habilitados)</li>
+            <li>:checked (Aplica estilos a elementos de formulário como checkboxes e radio buttons que estão marcados)</li>
+            <li>:nth-child(n) (Seleciona um elemento que é o enésimo filho de seu elemento pai)</li>
+            <li>:first-child (Seleciona o primeiro filho de um elemento)</li>
+            <li>:last-child (Seleciona o último filho de um elemento)</li>
+            <li>:nth-of-type(n) (Seleciona um elemento que é o enésimo filho de seu tipo dentro de seu elemento pai)</li>
+            <li>:first-of-type (Seleciona o primeiro filho de um elemento de um tipo específico)</li>
+            <li>:last-of-type (Seleciona o último filho de um elemento de um tipo específico)</li>
+            <li>:only-child (Seleciona um elemento que é o único filho de seu elemento pai)</li>
+            <li>:only-of-type (Seleciona um elemento que é o único filho de seu tipo dentro de seu elemento pai)</li>
+            <li>:empty (Seleciona um elemento que não tem filhos, nem mesmo nós de texto)</li>
+            <li>:required (Aplica estilos a elementos de formulário que são obrigatórios)</li>
+            <li>:optional (Aplica estilos a elementos de formulário que não são obrigatórios)</li>
+            <li>:valid (Aplica estilos a elementos de formulário cujo valor é válido)</li>
+            <li>:invalid (Aplica estilos a elementos de formulário cujo valor é inválido)</li>
+            <li>:visited (Aplica estilos a links que já foram visitados pelo usuário - possui restrições de estilo por motivos de privacidade)</li>
+            <li>:link (Aplica estilos a links que ainda não foram visitados)</li>
+            <li>:lang(language) (Seleciona elementos com base no atributo lang)</li>
+            <li>:not(selector) (Seleciona elementos que não correspondem a um seletor especificado)</li>
+            <li>:root (Seleciona o elemento raiz do documento (geralmente o elemento &lt;html&gt;))</li>
+            <li>:target (Seleciona o elemento que é o alvo do URL atual (indicado por um fragmento #))</li>
+            <li>:default (Seleciona o elemento de formulário que é o padrão entre um grupo de elementos relacionados)</li>
+            <li>:indeterminate (Aplica estilos a elementos de formulário como checkboxes que não estão nem marcados nem desmarcados)</li>
+            <li>:in-range (Aplica estilos a elementos de entrada cujo valor está dentro de um intervalo especificado)</li>
+            <li>:out-of-range (Aplica estilos a elementos de entrada cujo valor está fora de um intervalo especificado)</li>
+            <li>:read-only (Aplica estilos a elementos que não podem ser editados pelo usuário)</li>
+            <li>:read-write (Aplica estilos a elementos que podem ser editados pelo usuário)</li>
+        </ul>
+        <h4>Pseudo Elementos</h4>
+        <p>
             Já um pseudo-elemento é uma palavra-chave adicionada às declarações de um seletor após DOIS sinais de dois pontos “::” e permitem que você formate um pedaço específico de cada elemento referenciado. 
+        </p>
+        <p>
             Os principais pseudo elementos referenciados no CSS são:
-            
-            ::before (Insere conteúdo gerado antes do conteúdo de um elemento)
-            ::after (Insere conteúdo gerado depois do conteúdo de um elemento)
-            ::first-line (Aplica estilos à primeira linha de um bloco de texto)
-            ::first-letter (Aplica estilos à primeira letra de um bloco de texto)
-            ::placeholder (Estiliza o texto de dica (placeholder) de um campo de formulário)
-            ::marker (Estiliza os marcadores (bullets, números) de itens de lista)
-            ::selection (Aplica estilos ao texto que foi selecionado pelo usuário)
-            ::backdrop (Estiliza o fundo por trás de um elemento em tela cheia, como um vídeo ou um diálogo modal)
-            ::cue (Estiliza legendas e outras trilhas de texto para elementos de mídia como <video> e <audio>)
-            ::part() (Representa um elemento específico dentro de uma estrutura DOM shadow)
-            ::slotted() (Representa qualquer nó HTML que foi inserido em um slot dentro de um template shadow DOM)
-            
-            
-            exemplos:
-            <style>
+        </p>
+        <ul>
+            <li>::before (Insere conteúdo gerado antes do conteúdo de um elemento)</li>
+            <li>::after (Insere conteúdo gerado depois do conteúdo de um elemento)</li>
+            <li>::first-line (Aplica estilos à primeira linha de um bloco de texto)</li>
+            <li>::first-letter (Aplica estilos à primeira letra de um bloco de texto)</li>
+            <li>::placeholder (Estiliza o texto de dica <em>placeholder</em> de um campo de formulário)</li>
+            <li>::marker (Estiliza os marcadores (bullets, números) de itens de lista)</li>
+            <li>::selection (Aplica estilos ao texto que foi selecionado pelo usuário)</li>
+            <li>::backdrop (Estiliza o fundo por trás de um elemento em tela cheia, como um vídeo ou um diálogo modal)</li>
+            <li>::cue (Estiliza legendas e outras trilhas de texto para elementos de mídia como &lt;video&gt; e &lt;audio&gt;)</li>
+            <li>::part() (Representa um elemento específico dentro de uma estrutura DOM shadow)</li>
+            <li>::slotted() (Representa qualquer nó HTML que foi inserido em um slot dentro de um template shadow DOM)</li>
+        </ul>
+        <h5>Exemplos</h5>
+        <pre><code>
+            &lt;style&gt;
                 a{
                 color: green;
                 }
@@ -520,78 +533,115 @@
                 a::visited{
                 color: red;
                 }
-            dessa forma, todos os links ancorados terão por padrão a cor verde, com a pseudo-classe “hover” o site vai detectar quando passarmos o mouse sobre o link, e mudará a cor para preto(enquanto o mouse permanecer), já o pseudo-elemento, identifica qual link já foi visitado pelo usuário, e muda a cor para vermelho
-            
-            
-            CAIXAS
-            
-            EXEMPLO 
-            —---------------
-            MARGIN……
-            OUTLINE
-            ___________
-            BORDER
-            ___________
-            PADDING
-            —---------------
-            CONTEÚDO
-            
-            EXIBE ONDE FICA HEIGHT  E WIDTH*
-            TIPOS DE CAIXAS
-            
-            imagem box level
-            
-            imagem inline level
-            
-            
-            BOX LEVEL
+        </code></pre>
+        <p>
+            Dessa forma, todos os links ancorados terão por padrão a cor verde, com a pseudo-classe “hover” o site vai detectar quando passarmos o mouse sobre o link, e mudará a cor para preto(enquanto o mouse permanecer), já o pseudo-elemento, identifica qual link já foi visitado pelo usuário, e muda a cor para vermelho.
+        </p>
+        <h3>13.Caixas</h3>
+        <h4>exemplo de Box model:</h4>
+        <div class="excaixa">
+            <p>
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+            </p>
+            <!--
+            lembar de exibir onde fica Height e width das caixas e fazer um aninhamento pro visual parecer uma caixa só
+            -->
+        </div>
+        <h4>Tipos de caixas</h4>
+        <h5>Box Level:</h5>
+        <!--exemplo-->
+        <p>
             tags box level são as que criam caixas e quebram a linha para continuar na próxima.
-            exemplos
-            <div> <header> <footer> <h1>-<h6> <form> <p> <article> <video> <main> <aside>
-            
-            INLINE LEVEL
-            tags inline level são as que fazem o conteúdo continuar na mesma linha sem interrupção
-            exemplos
-            <span> <a> <code> <small> <em> <sup> <input> <label> <sub> <button> <select>
-            
-            você pode realizar vários testes com as devtools ao inspecionar elemento no navegador
-            
+        </p>
+        <ul>
+            <li>&lt;div&gt;</li>
+            <li>&lt;header&gt;</li>
+            <li>&lt;footer&gt;</li>
+            <li>&lt;h1&gt;-&lt;h6&gt;</li>
+            <li>&lt;form&gt;</li>
+            <li>&lt;p&gt;</li>
+            <li>&lt;article&gt;</li>
+            <li>&lt;video&gt;</li>
+            <li>&lt;main&gt;</li>
+            <li>&lt;aside&gt;</li>
+        </ul>
+        <h5>Inline Level:</h5>
+        <p>
+            Tags inline level são as que fazem o conteúdo continuar na mesma linha sem interrupção.
+        </p>
+        <ul>
+            <li>&lt;span&gt;</li>
+            <li>&lt;a&gt;</li>
+            <li>&lt;code&gt;</li>
+            <li>&lt;small&gt;</li>
+            <li>&lt;em&gt;</li>
+            <li>&lt;sup&gt;</li>
+            <li>&lt;input&gt;</li>
+            <li>&lt;label&gt;</li>
+            <li>&lt;sub&gt;</li>
+            <li>&lt;button&gt;</li>
+            <li>&lt;select&gt;</li>
+        </ul>
+        <p>
+            Você pode realizar vários testes com as devtools ao inspecionar elemento no navegador
+        </p>
+        <aside>
             *O padrão para se alinhar as arestas das caixas, é no sentido HORÁRIO a partir do TOPO.
-            exemplo:
+        </aside>
+        <pre><code>
             margin-top: 10px;
             margin-right: 10px;
             margin-bottom: 10px;
             margin-left: 10px;
-            o mesmo padrão serve para OUTLINE, BORDER e PADDING tbm
+        </code></pre>
+        <p>
+            o mesmo padrão serve para OUTLINE, BORDER e PADDING também
+        </p>
+        <p>
             o comando Margin: AUTO centralizará a caixa na página, pois ela calcula o espaço restante entre as arestas e as bordas do espaço.
-            
+        </p>
+        <h4>Shorthands</h4>
+        <p>
             Shorthands são propriedades com múltiplos valores simplificados em uma só linha, por exemplo:
-            
+        </p>
+        <pre><code>
             Border: 10px solid gray;
-                     top/right/bottom/left
-            padding: 10px 10px 10px 10px;    SE os valores são iguais, apenas colocar 10px uma vez, servirá para as 4 arestas da caixa, caso as margens da esquerda e direita sejam para centralizar, substitua os pixels pelo valor AUTO
-            
+            padding: (top)10px (right)10px (bottom)10px (left)10px;
+        </code></pre>
+        <p>
+            SE os valores são iguais, apenas colocar 10px uma vez, servirá para as 4 arestas da caixa, caso as margens da esquerda e direita sejam para centralizar, substitua os pixels pelo valor AUTO
+        </p>
+        <pre><code>
             Margin: 20px auto 40px auto;
             
             Outline: 5px dashed salmon;
-            
-            utilizando  Display: block;
-                     Display: inline-block;
-            é possível transformar caixas que eram inline em block, e vice-versa
-            
-            GROUPING TAGS SEMÂNTICAS
-            Servem com a mesma função do <div>, porém com semântica.
-            <header> - cabeçalho
-            <main> - conteúdo principal
-            <footer> - rodapé do site
-            <article> - conteúdo independente
-            <aside> - conteúdo tangencial
-            <nav> - box de links navegáveis
-            <section> - Box genérica caso outra não se aplicar
-            
-            BOX-SHADOW
-            inicie testar suas sombras das caixas com a propriedade box-shadow: 1px 1px 1px black e nas devtools experimente o espalhamento da luz que melhor se encaixar, lembre de sempre manter uma transparência
-            
+        </code></pre>
+        <p>
+            É possível transformar caixas que eram inline em block, e vice-versa utilizando:
+        </p>
+        <pre><code>
+            Display: block;
+            Display: inline-block;
+
+        </code></pre>
+        <h4>Grouping Tags Semânticas</h4>
+        <p>
+            Elas servem com a mesma função do &lt;div&gt;, porém com semântica.
+        </p>
+        <ul>
+            <li>&lt;header&gt; - cabeçalho</li>
+            <li>&lt;main&gt; - conteúdo principal</li>
+            <li>&lt;footer&gt; - rodapé do site</li>
+            <li>&lt;article&gt; - conteúdo independente</li>
+            <li>&lt;aside&gt; - conteúdo tangencial</li>
+            <li>&lt;nav&gt; - box de links navegáveis</li>
+            <li>&lt;section&gt; - Box genérica caso outra não se aplicar</li>
+        </ul>
+        <h4>Box-shadow</h4>
+        <p>
+            inicie testando as suas sombras das caixas com a propriedade box-shadow: 1px 1px 1px black e nas devtools experimente o espalhamento da luz que melhor se encaixar, lembre de sempre manter uma transparência
+        </p>
+        <!--
             VÉRTICES ARREDONDADOS
             Border-radius: 10px cria bordas arredondadas uniformes, mas cada borda pode ser configurada individualmente, ex: 10px 20px 30px 40px, se utilizar o valor 50% a caixa se tornará um círculo perfeito, elas também podem possuir box-shadow
             
@@ -767,24 +817,24 @@
             
             EX2:
             
-                <table>
-                    <thead>
-                        <tr>
-                            <th> XXX </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td> yyy </td>
-                        </tr>
-                    </body>
-                    <tfoot>
-                        <tr>
-                            <th> XXX </th>
-                            <td> 000 </td>
-                        </tr>
-                    </tfoot>
-                </table>
+                &lt;table&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th> XXX &lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt; yyy &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/body&gt;
+                    &lt;tfoot&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt; XXX &lt;/th&gt;
+                            &lt;td&gt; 000 &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tfoot&gt;
+                &lt;/table&gt;
             
             
             
