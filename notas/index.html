@@ -641,15 +641,27 @@
         <p>
             inicie testando as suas sombras das caixas com a propriedade box-shadow: 1px 1px 1px black e nas devtools experimente o espalhamento da luz que melhor se encaixar, lembre de sempre manter uma transparência
         </p>
-        <!--
-            VÉRTICES ARREDONDADOS
-            Border-radius: 10px cria bordas arredondadas uniformes, mas cada borda pode ser configurada individualmente, ex: 10px 20px 30px 40px, se utilizar o valor 50% a caixa se tornará um círculo perfeito, elas também podem possuir box-shadow
-            
-            VARIÁVEIS EM CSS:
-            é uma excelente forma de organizar o esquema de cores e fontes e definir “apelidos”, e vão ajudar muito em alteração no código CSS em páginas muito longas
-            
-            para se usar
-            
+        <h4>Vértices Arredondados</h4>
+        <p>
+            Border-radius: 10px cria bordas arredondadas uniformes
+        </p>
+        <p class="brex1">Exemplo</p>
+        <p>
+            Mas cada borda pode ser configurada individualmente, ex: 10px 20px 30px 40px
+        </p>
+        <p class="brex2">Exemplo</p>
+        <p>
+            se utilizar o valor 50% a caixa se tornará um círculo perfeito, elas também podem possuir box-shadow.
+        </p>
+        <p class="brex3">Exemplo</p>
+        <h4>Variáveis em CSS</h4>
+        <p>
+            É uma excelente forma de organizar o esquema de cores e fontes e definir “apelidos”, e vão ajudar muito em alteração no código CSS em páginas muito longas
+        </p>
+        <p>
+            para se usar, basta configurar assim no início do CSS:
+        </p>
+        <pre><code>
             :root {
                 -- cor0: #835E84;
                 -- cor1: #CDDB51;
@@ -657,36 +669,54 @@
                 -- fonte1: sans-serif;
                 -- fonte2: cursive;
             }
-            
+        </code></pre>
+        <p>
             para ser utilizadas, basta utilizar o comando Var(--item)
-            
-            
-            GIT E GITHUB
-            
+        </p>
+        <h3>14.Git e Github</h3>
+        <p>
             repositório local / repositório remoto
-            
-            GIT é um software que mantém versões dos meus sites guardados localmente
-            
-            GITHUB é um servidor que permite que meus projetos sejam salvos na nuvem, tornando o repositório remoto
-            
-            Commit é o ato de atualizar seu repositório pelas alterações feitas no seu trabalho, a cada commit, uma versão nova será criada, e poderá ser revertida
-            
-            PUSH é o ato de atualizar o repositório remoto
-            BACKGROUND IMAGE
-            para utilizar uma imagem de fundo, utilize no CSS a propriedade Background-image: url(‘imagem.jpg’) o caminho da imagem deverá ser digitado, se você utilizar “../” o visual code pode mostrar o caminho dependendo da versão
-            
+        </p>
+        <p>
+            <strong>GIT</strong> é um software que mantém versões dos meus sites guardados localmente
+        </p>
+        <p>
+            <strong>GITHUB</strong> é um servidor que permite que meus projetos sejam salvos na nuvem, tornando o repositório remoto
+        </p>
+        <p>
+            <strong>Commit</strong> é o ato de atualizar seu repositório pelas alterações feitas no seu trabalho, a cada commit, uma versão nova será criada, e poderá ser revertida
+        </p>
+        <p>
+            <strong>PUSH</strong> é o ato de atualizar o repositório remoto
+        </p>
+        <h3>15.Background Image</h3>
+        <p>
+            para utilizar uma imagem de fundo, utilize no CSS a propriedade  
+        </p>
+        <pre><code>
+            Background-image: url(‘imagem.jpg’)
+        </code></pre>
+        <p>
+            o caminho da imagem deverá ser digitado, se você utilizar “../” o visual code pode mostrar o caminho dependendo da versão
+        </p>
+        <p>
             Essas imagens de fundo podem ser empregadas dentro de CAIXAS, e também configuráveis através de seletores “id” e “classes”.
-            
-            lembre-se que o <body> é uma grande caixa
-            
-            FUNÇÃO REPEAT
-            Quando a caixa é maior que a imagem, ela se repete por padrão, mas é possível alterar
-            Background-repeat:
-            no-repeat  “sem repetição”
-            repeat “padrão”
-            repeat-x “repetir na horizontal(eixo x)”
-            repeat-y “repetir na vertical(eixo t)”
-            
+        </p>
+        <p>
+            <q>lembre-se que o &lt;body&gt; é uma grande caixa.</q>
+        </p>
+        <h4>Função Repeat</h4>
+        <p>
+            Quando a caixa é maior que a imagem, ela se repete por padrão, mas é possível alterar.
+        </p>
+        <h4>Background-repeat:</h4>
+        <ul>
+            <li>no-repeat  “sem repetição”</li>
+            <li>repeat “padrão”</li>
+            <li>repeat-x “repetir na horizontal(eixo x)”</li>
+            <li>repeat-y “repetir na vertical(eixo t)”</li>
+        </ul>
+        <!--
             background position
             
             vai ser referenciado para decidir a partir de qual parte da imagem ela vai ser ancorada pra exibição, suas posições são:

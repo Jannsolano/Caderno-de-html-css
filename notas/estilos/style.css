@@ -73,3 +73,29 @@ div.excaixa {
     padding: 20px dashed green;
 
 }
+
+.brex1 {
+    background-color: var(--cor03);
+    border-radius: 10px;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+.brex2 {
+    background-color: var(--cor03);
+    border-radius: 10px 20px 30px 40px;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+}
+.brex3 {
+    background-color: var(--cor03);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    text-align: center;
+    padding-top: 65px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.667);
+}
