@@ -122,3 +122,11 @@ col.c2 {
 col.c3 {
     background-color: #AC7C24;
 }
+iframe{
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px #0000006C;
+    margin: auto;
+    }

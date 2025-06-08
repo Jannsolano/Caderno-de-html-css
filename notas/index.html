@@ -1074,136 +1074,176 @@
                 border= “5px solid black”;
                 border-radius= “15px”;
                 box-shadow= “3px 3px 10px #0000006C;
+                margin= auto;
             }
         </code></pre>
-        <!--
-            
-            
-            DIRECIONANDO NOVO CONTEÚDO PARA IFRAME
+        <p>Esta configuração irá levar ao seguinte resultado:</p>
+        <iframe src=""></iframe>
+        <h4>DIRECIONANDO NOVO CONTEÚDO PARA IFRAME</h4>
+        <p>
             Podemos fazer o iframe trocar seu conteúdo exibido utilizando links ou códigos javascript na página. O primeiro passo é dar ao iframe um nome com o parâmetro NAME.
-            
-            <iframe name=”quadro” src=”pagina01.html”>
-            <p>NAVEGADOR INCOMPATÍVEL</p>
-            </iframe>
-            
+        </p>
+        <pre><code>
+            &lt;iframe name=”quadro” src=”pagina01.html”&gt;
+            &lt;p&gt;NAVEGADOR INCOMPATÍVEL&lt;/p&gt;
+            &lt;/iframe&gt;
+        </code></pre>
+        <p>
             Dessa forma o quadro vai exibir o conteudo da pagina01.html com 300x150 px de tamanho, e em qualquer lugar do documento, pode ser criado um link que direcione o iframe
-            <a href= “pagina02.html” target= “quadro”> Abrir segundo site </a>
+        </p>
+        <pre><code>
+            &lt;a href= “pagina02.html” target= “quadro”&gt; Abrir segundo site &lt;/a&gt;
+        </code></pre>
+        <p>
             O link vai abrir a pagina02.html dentro do iframe sempre que o usuário clicar sobre, substituindo o conteúdo anterior.
             *não confunda iframe com frames
-            
-            MEDIDAS DE SEGURANÇA
+        </p>
+        <h4>MEDIDAS DE SEGURANÇA</h4>
+        <p>
             Sandbox é um parâmetro que ao ser utilizado, bloqueia funcionalidades do site dentro do iframe
             não pode enviar dados de formulário
             não pode executar scripts
             desabilita todo tipo de API
-            desabilita todo tipo de plugin com <embed>, <object>, <applet>
+            desabilita todo tipo de plugin com
+        </p>
+        <p>
+            &lt;embed&gt;, &lt;object&gt;, &lt;applet&gt;
+        </p>
+        <p>
             evita o iframe de usar a navegação top level do navegador
             bloqueia recursos como autoplay e foco automático em elementos formulário
-            
+        </p>
+        <p>
             Para proteger seu site com um iframe controlado declare:
-            <iframe src= “teste.com” frameborder= “0” width= “400px” scrolling= “yes” sandbox= “sandbox”> </iframe>
-            
+        </p>
+        <pre><code>
+            &lt;iframe src= “teste.com” frameborder= “0” width= “400px” scrolling= “yes” sandbox= “sandbox”&gt; &lt;/iframe&gt;
+        </code></pre>
+        <p>
             utilizar a propriedade sandbox com o valor sandbox vai ligar todas as propriedades citadas acima
-            
+        </p>
+        <p>
             para abrir exceções e desbloquear alguns recursos, basta inserir os valores da lista abaixo:
-            allow-forms
-            allow-scripts
-            allow-modals
-            allow-popups
-            allow-same-origin
-            allow-top-navigation
-            
-            POLITICA DE REFERENCIA
-            
+        </p>
+        <ul>
+            <li>allow-forms</li>
+            <li>allow-scripts</li>
+            <li>allow-modals</li>
+            <li>allow-popups</li>
+            <li>allow-same-origin</li>
+            <li>allow-top-navigation</li>
+        </ul>
+        <h4>POLITICA DE REFERENCIA</h4>
+        <p>
             Ao configurar a propriedade “referrerpolicy” em um iframe, conseguimos definir quantos dados serão compartilhados. A maneira mais “anônima” de manter a navegação é usar o valor “no-refer”. 
+        </p>
+        <p>
             Existem outros valores como:
-            
-            no-referer-when-downgrade(padrão)
-            origin
-            origin-when-cross-origin
-            same-origin
-            strict-origin
-            strict-origin-when-cross-origin
-            unsafe-URL
-            
-            Dica rápida: Box-sizing= “border box”; faz com que as bordas façam parte da caixa
-            FORMULÁRIOS
+        </p>
+        <ul>
+            <li>no-referer-when-downgrade(padrão)</li>
+            <li>origin</li>
+            <li>origin-when-cross-origin</li>
+            <li>same-origin</li>
+            <li>strict-origin</li>
+            <li>strict-origin-when-cross-origin</li>
+            <li>unsafe-URL</li>
+        </ul>
+        <p>
+            <strong>Dica rápida:</strong> Box-sizing= “border box”; faz com que as bordas façam parte da caixa
+        </p>
+        <h3>17.FORMULÁRIOS</h3>
+        <p>
             Os formulários que vemos normalmente na internet, são aqueles campos que você digita informação, como em telas de login
-            
-            <form>
+        </p>
+        <pre><code>
+            &lt;form&gt;
                 nome:
                 cria caixa para texto	usado para atrelar ao label
-            v			v
-                <input type= “text”      name= “fnome”>
+                        v			v
+                &lt;input type= “text”      name= “fnome”&gt;
             
                 cria botão formulário	nome do botão
-            v			v
-                <input type= “submit” value= “enviar”>
-            </form>
-            
+                        v			v
+                &lt;input type= “submit” value= “enviar”&gt;
+            &lt;/form&gt;
+        </code></pre>
+        <p>
             o script acima cria o seguinte item no site
-            
-            nome:
-            ex: joão
-            
-            
-            enviar
-            
-            
-            Só essas propriedades não fazem o formulário funcionar, apenas utilizamos o <form></form> para delimitar o formulário. Tudo que estiver dentro dele é considerado conteúdo dos campos.
-            
-            adicionar dois atributos importantes na tag <form>: o method e o action. O method indica o método de envio dos dados, e o action diz para onde os dados serão enviados.
-            Para dar ligação semântica entre a caixa de texto ao identificador adicione <label> para relacionar ambos.
-            para <label> funcionar corretamente, a caixa de texto deve ter um id.
-            
+        </p>
+        <form action="" method="post">
+            <input type="text" name="fnome">
+            <input type="submit" value="enviar">
+        </form>
+        <p>
+            Só essas propriedades não fazem o formulário funcionar, apenas utilizamos o &lt;form&gt;&lt;/form&gt; para delimitar o formulário. Tudo que estiver dentro dele é considerado conteúdo dos campos.
+        </p>
+        <p>
+            adicionar dois atributos importantes na tag &lt;form:&gt; o method e o action. O method indica o método de envio dos dados, e o action diz para onde os dados serão enviados.
+        </p>
+        <p>
+            Para dar ligação semântica entre a caixa de texto ao identificador adicione &lt;label&gt; para relacionar ambos.
+            para &lt;label&gt; funcionar corretamente, a caixa de texto deve ter um id.
+        </p>
+        <p>
             Depois dessas alterações, teremos o novo código:
-            
-            <form method= “get” action= “cadastro.php”>
-                <label for= “camponome”>nome:</label>
-                <input type= “text” name= “fnome” id= “camponome”>
-                <input type= “submit” value= “enviar”>
-            
+        </p>
+        <pre><code>
+            &lt;form method= “get” action= “cadastro.php”&gt;
+                &lt;label for= “camponome”&gt;nome:&lt;/label&gt;
+                &lt;input type= “text” name= “fnome” id= “camponome”&gt;
+                &lt;input type= “submit” value= “enviar”&gt;
+        </code></pre>
+        <p>
             O resultado visual continua o mesmo, mas agora o formulário é semântico e o navegador vai conseguir relacionar os itens e enviar os dados para o lugar certo.
-            
+        </p>
+        <p>
             escolhemos no LABEL se o script de programação vai ser rodado identificando pelo NAME ou pelo ID nesse curso usaremos mais o ID.
-            
-            METHOD GET & POST
-            
+        </p>
+        <h4>METHOD GET & POST</h4>
+        <h4>GET:</h4>
+        <p>
             O método GET faz com que os valores que você digitou no formulário apareça na url do navegador, ele condensa os dados digitados e envia como parte do endereço acessado. POSSUI O LIMITE DE 3000 BYTES
-            
-            Já o método POST irá pegar todos os dados digitados e enviar diretamente no corpo da requisição HTTP, assim os dados não irão aparecer na URL 
-            
+        </p>
+        <h4>POST:</h4>
+        <p>
+            Já o método POST irá pegar todos os dados digitados e enviar diretamente no corpo da requisição HTTP, assim os dados não irão aparecer na URL
+        </p>
+        <p>
             *mas ainda podem ser vistos nas DEVTOOLS na aba network escolhendo o arquivo ACTION, no nosso caso “cadastro.php” indo na aba headers e indo na seção form data nos mostrará os dados inseridos.
-            
-            PARÂMETROS NOVOS DE FORMULÁRIO
-            <form> autocomplete= on/off - habilita o navegador a completar o campo
-            
-            <input>
-            type= text - cria uma caixa de texto
-            type= password - cria uma caixa de senha com censura padrão
-            type= number - cria uma caixa de números
-            type= radio - cria botões de marcação única
-            type= email - cria caixa para inserir email
-            type= range - cria uma barra de nível selecionável
-            type= reset - cria um botão que apaga todos os dados inseridos na página
-            type= color - cria uma caixa de seleção de cor
-            type= submit - cria um botão que envia os dados
-            type= tel - cria uma caixa para inserir telefone
-            type= checkbox - cria uma caixa de confirmação
-            type= date - cria uma caixa de inserir data
-            type= time - cria uma caixa para inserir hora
-            type= month - cria uma caixa de inserir mês
-            type= button - cria uma caixa de botão
-            type= file - cria um botão para inserir arquivo
-            type= image - permite criar um botão personalizado com src e/ou alt
-            type= url - cria um campo para inserir endereços de site
-            type= search - cria uma barra de pesquisa
-            type= datetime-local - cria uma caixa interativa para inserir data e hora
-            type= week - cria uma caixa para inserir semanas
-            type= hidden - cria um campo de entrada escondido do usuário, pode conter informações complexas, passar valores pré definidos, tokens de segurança, etc.
-            
-            PARÂMETROS DE CONFIGURAÇÃO DE INPUT
-            
+        </p>
+        <h4>PARÂMETROS NOVOS DE FORMULÁRIO</h4>
+        <p>
+            &lt;form&gt; autocomplete= on/off - habilita o navegador a completar o campo
+        </p>
+        <h4>VALORES PARA INPUT</h4>
+        <ul>
+            <li>type= text - cria uma caixa de texto</li>
+            <li>type= password - cria uma caixa de senha com censura padrão</li>
+            <li>type= number - cria uma caixa de números</li>
+            <li>type= radio - cria botões de marcação única</li>
+            <li>type= email - cria caixa para inserir email</li>
+            <li>type= range - cria uma barra de nível selecionável</li>
+            <li>type= reset - cria um botão que apaga todos os dados inseridos na página</li>
+            <li>type= color - cria uma caixa de seleção de cor</li>
+            <li>type= submit - cria um botão que envia os dados</li>
+            <li>type= tel - cria uma caixa para inserir telefone</li>
+            <li>type= checkbox - cria uma caixa de confirmação</li>
+            <li>type= date - cria uma caixa de inserir data</li>
+            <li>type= time - cria uma caixa para inserir hora</li>
+            <li>type= month - cria uma caixa de inserir mês</li>
+            <li>type= button - cria uma caixa de botão</li>
+            <li>type= file - cria um botão para inserir arquivo</li>
+            <li>type= image - permite criar um botão personalizado com src e/ou alt</li>
+            <li>type= url - cria um campo para inserir endereços de site</li>
+            <li>type= search - cria uma barra de pesquisa</li>
+            <li>type= datetime-local - cria uma caixa interativa para inserir data e hora</li>
+            <li>type= week - cria uma caixa para inserir semanas</li>
+            <li>type= hidden - cria um campo de entrada escondido do usuário, pode conter informações complexas, passar valores pré definidos, tokens de segurança, etc.</li>
+        </ul>
+        <h4>PARÂMETROS DE CONFIGURAÇÃO DE INPUT</h4>
+        
+        <!--
             placeholder= “texto” - cria um texto de dica dentro da caixa antes da entrada de texto do usuário
             required - torna o campo obrigatório
             readonly - impede edição de valor
