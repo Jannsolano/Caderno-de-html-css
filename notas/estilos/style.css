@@ -52,10 +52,14 @@ ul, ol {
     padding: 15px;
 }
 
-table{
-    border: 1px solid white;
+table {
+    border-collapse: collapse;
+    margin:20px auto;
+}
+
+th, td, tr {
+    border: 1px inset white;
     padding: 5px;
-    margin: 5px;
 }
 
 aside{
@@ -98,4 +102,23 @@ div.excaixa {
     text-align: center;
     padding-top: 65px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.667);
+}
+
+.tex {
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+col.c1 {
+    background-color: #E3C386;;
+}
+
+col.c2 {
+    background-color: #DEA12F;
+}
+
+col.c3 {
+    background-color: #AC7C24;
 }

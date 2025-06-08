@@ -716,69 +716,82 @@
             <li>repeat-x “repetir na horizontal(eixo x)”</li>
             <li>repeat-y “repetir na vertical(eixo t)”</li>
         </ul>
-        <!--
-            background position
-            
+        <H4>Background Position</H4>
+        <p>
             vai ser referenciado para decidir a partir de qual parte da imagem ela vai ser ancorada pra exibição, suas posições são:
-            
-            
-            LEFT
-            TOP
-            CENTER
-            TOP
-            RIGHT
-            TOP
-            LEFT 
-            CENTER
-            CENTER
-            CENTER
-            RIGHT
-            CENTER
-            LEFT
-            BOTTOM
-            CENTER
-            BOTTOM
-            RIGHT
-            BOTTOM
-            
-            
-            BACKGROUND SIZE:
+        </p>
+        <table>
+            <tr>
+                <td>LEFT <br> TOP</td>
+                <td>CENTER <br>TOP</td>
+                <td>RIGHT <br> TOP</td>
+            </tr>
+            <tr>
+                <td>LEFT <br> CENTER</td>
+                <td>CENTER <br> CENTER</td>
+                <td>RIGHT <br> CENTER</td>
+            </tr>
+            <tr>
+                <td>LEFT <br> BOTTOM</td>
+                <td>CENTER <br> BOTTOM</td>
+                <td>RIGHT <br> BOTTOM</td>
+            </tr>
+        </table>
+        <h4>Background Size</h4>
+        <p>
             É usado para redimensionar a imagem para forçar a caber na caixa, por padrão ela é mostrada no seu tamanho natural. Os valores que utilizamos para alterar isso são:
-            
-            Auto (padrão)
-            a imagem de fundo fica com tamanho original
-            [ length ]px
-            redimensiona a largura e faz a altura se adaptar automaticamente
-            [ length ] %
-            também dá pra botar os dois valores e utilizar porcentagem
-            cover
-            faz a imagem ser totalmente exibida na tela, sem cortes
-            contain
-            redimensiona a imagem para cobrir o container, mesmo que corte
-            
-            
-            
-            
-            BACKGROUND-ATTACHMENT:
+        </p>
+        <table>
+            <tr>
+                <td>Auto (padrão)</td>
+                <td>A imagem de fundo fica com tamanho original</td>
+            </tr>
+            <tr>
+                <td>[ length ]px</td>
+                <td>redimensiona a largura e faz a altura se adaptar automaticamente</td>
+            </tr>
+            <tr>
+                <td>[ length ] %</td>
+                <td>também dá pra botar os dois valores e utilizar porcentagem</td>
+            </tr>
+            <tr>
+                <td>cover</td>
+                <td>faz a imagem ser totalmente exibida na tela, sem cortes</td>
+            </tr>
+            <tr>
+                <td>contain</td>
+                <td>redimensiona a imagem para cobrir o container, mesmo que corte</td>
+            </tr>
+        </table>
+        <h4>Background Attachment</h4>
+        <p>
             Configura o vínculo da imagem de fundo com o resto do documento, principalmente se o conteúdo for maior do que a altura da página
-            
-            scroll(padrão): a imagem vai rolar junto com o conteúdo
-            fixed: a imagem de fundo vai ficar fixada enquanto o conteúdo rola
-            
-            SHORTHANDS BACKGROUND:
+        </p>
+        <ul>
+            <li>scroll(padrão): a imagem vai rolar junto com o conteúdo</li>
+            <li>fixed: a imagem de fundo vai ficar fixada enquanto o conteúdo rola</li>
+        </ul>
+        <h4>Shorthands Background</h4>
+        <p>
             para fazer a configuração inteira de background com imagem de forma bem resumida, faça na seguinte ordem
+        </p>
+        <p>
             Background: color > image > position > repeat > [ size ]* > attachment
+        </p>
+        <p>
             *até então o background-size está no manual da W3C com esse uso dado como correto, porém ainda não funciona nos navegadores, então utilize o background-size separado normalmente caso teste e não funcione.
-            
-            CENTRALIZAÇÃO VERTICAL
+        </p>
+        <h4>Centralização Vertical</h4>
+        <p>
             Primeiro crie uma hierarquia entre os containers.
+        </p>
+        <pre><code>
+            &lt;div id= “fora”&gt;
+                &lt;div id= “dentro”&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
             
-            <div id= “fora”>
-                <div id= “dentro”>
-                </div>
-            </div>
-            
-            <style>
+            &lt;style&gt;
                 div#fora{
                     position: relative
                     padding: 10px
@@ -788,46 +801,57 @@
                 top: n%
                 left: n%
                 }
+        </code></pre>
+        <p>
             caso coloque nos valores TOP e LEFT (50%, 50%) a página vai alinhar a caixa a partir do pixel superior esquerdo
             mas utilizando TRANSFORM com a propriedade TRANSLATE, escolhe o pixel inicial, usando (-50%, -50%) alinhamos a caixa interna ao centro
-            
+        </p>
+        <p>
             Ao definir o bloco interno como ABSOLUTO é possível personalizar a posição exata através de “top” e “left”, tendo como base a caixa externa
-            
-            técnicas novas:
-            text-transform: uppercase;
-            transforma todas as letras em maiúsculas
-            font-variant: small-caps;
-            todas as letras ficam maiúsculas, porém um pouco menores e as primeiras letras ficam maiores
-            
-            TABELAS EM HTML
-            “você não deve utilizar tabelas para criar a estrutura do seu site”
-            
+        </p>
+        <h4>Técnicas novas:</h4>
+        <ul>
+            <li>text-transform: uppercase;</li>
+            <li>transforma todas as letras em maiúsculas</li>
+            <li>font-variant: small-caps; todas as letras ficam maiúsculas, porém um pouco menores e as primeiras letras ficam maiores</li>
+        </ul>
+        <h3>16.Tabelas em HTML</h3>
+        <p>
+            <q>você não deve utilizar tabelas para criar a estrutura do seu site</q>
+        </p>
+        <p>
             hierarquia de tabelas simples
-            
-            <table> = tabela
-                <tr> = table row    linha de tabela
-                <td> = table data  dados de tabela
+        </p>
+        <pre><code>
+            &lt;table&gt; = tabela
+                &lt;tr&gt; = table row    linha de tabela
+                &lt;td&gt; = table data  dados de tabela
             
             exemplo:
-            <table>
-                <tr>        <- linha
-                    <td> A1    <- dado
-                    <td> B1
-                </tr>*
-            </table>
-            
-            *A W3C diz que as tags <tr> e <td> não precisam ser obrigatoriamente fechadas, mas como o visual code faz automaticamente, não há problema em deixar assim, é até recomendável.
-            
+            &lt;table&gt;
+                &lt;tr&gt;        &lt;- linha
+                    &lt;td&gt; A1    &lt;- dado
+                    &lt;td&gt; B1
+                &lt;/tr&gt;*
+            &lt;/table&gt;
+        </code></pre>
+        <p>
+            *A W3C diz que as tags &lt;tr&gt; e &lt;td&gt; não precisam ser obrigatoriamente fechadas, mas como o visual code faz automaticamente, não há problema em deixar assim, é até recomendável.
+        </p>
+        <p>
             SE OS DADOS NÃO FOREM COLOCADOS NA HIERARQUIA CERTA, ELES SERÃO EXIBIDOS ALEATORIAMENTE FORA DE ORDEM
-            
-            o text-align: Left/ Center/ Right 
+        </p>
+        <h4>Alinhamento</h4>
+        <p>
+            <strong>o text-align:</strong> Left/ Center/ Right 
             faz o alinhamento Horizontal dos dados
-            
-            já o vertical-align: Top/ Middle / Bottom
+        </p>
+        <p>
+            <strong>o vertical-align:</strong> Top/ Middle / Bottom
             alinha os itens Verticalmente
-            
-            ANATOMIA PARA TABELAS GRANDES
-            
+        </p>
+        <h4>Anatomia para tabelas grandes</h4>
+        <pre><code>
             TABLE
                 THEAD
                     TR, TD, TH
@@ -835,19 +859,18 @@
                     TR, TD, TH
                 TFOOT
                     TR, TD, TH
-            
-            <caption>
+        </code></pre>
+        <h4>&lt;caption&gt;</h4>
+        <p>
             cria legenda para a tabela
-            
-            <scope> = col
-            serve para identificar as colunas e facilitar a semântica para mecanismos de busca
-            
-            
-            
-            
-            EX2:
-            
-                &lt;table&gt;
+        </p>
+        <h4>&lt;scope&gt; = col </h4>
+        <p>
+            Serve para identificar as colunas e facilitar a semântica para mecanismos de busca
+        </p>
+        <h4>exemplo:</h4>
+        <pre><code>
+            &lt;table&gt;
                     &lt;thead&gt;
                         &lt;tr&gt;
                             &lt;th> XXX &lt;/th&gt;
@@ -865,75 +888,107 @@
                         &lt;/tr&gt;
                     &lt;/tfoot&gt;
                 &lt;/table&gt;
-            
-            
-            
-            EFEITO ZEBRADO:
-            basta acrescentar ao CSS das linhas <tr> o seletor :nht-child() e definir [odd] para números ímpares e [even] para números pares, (2n) também funciona
-            
-            CABEÇALHO FIXO:
-            Primeiramente a tabela precisa ser POSITION: relative
+        </code></pre>
+        <h4>Resultado</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>header</th>
+                    <td>XXX</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>body</th>
+                    <td>YYY</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>XXX</th>
+                    <td>000</td>
+                </tr>
+            </tfoot>
+        </table>
+        <h4>Efeito Zebrado</h4>
+        <p>
+            basta acrescentar ao CSS das linhas <tr> o seletor <em>:nht-child()</em> e definir [odd] para números ímpares e [even] para números pares, (2n) também funciona
+        </p>
+        <h4>Cabeçalho Fixo</h4>
+        <p>
+            Primeiramente a tabela precisa ser <em>POSITION: relative</em>
+        </p>
+        <pre><code>
             thead > tr > th {
                 position: sticky;
                 top: -1px;
                 background-color: gray
-            
+            }
+        </code></pre>
+        <p>
             use com moderação, pois ainda não funciona em todos os navegadores
-            
-            MESCLAGEM DE CÉDULAS
-            
-            É necessário apenas que algumas células não existam mais para criar um espaço em branco, e referente a ele usaremos o SPAN inline
-            rowspan=”nº” mesclagem de LINHAS, acontece VERTICALMENTE
-            colspan=”nº”
-            
-            exemplo:
-            
-            
-            
-            1
-            2
-            
-            3
-            4
-            5
-            6
-            7
-            8
-            9
-            
-            10
-            11
-            12
-            13
-            14
-            15
-            
-            
-            8: colspan=”3”
-            10: rowspan=”2”
-            
-            ESCOPOS DE GRUPOS
-            A W3C recomenda colocar escopos em TODOS os <th> para identificar os conteúdos das linhas individuais ou em grupo 
-            
-            SCOPE:
-            “COL” usado em th que separe COLUNAS no MESMO alinhamento
-            “COLGROUP” usado em th com grupos MESCLADOS no conteúdo
-            “ROW” usado em th que separa LINHAS no mesmo tr simples
-            “ROWGROUP” usado em th com linhas de conteúdo mesclado com a própria, e outros tr
-            
-            PERSONALIZANDO COLUNAS
-            Para conseguir selecionar uma coluna inteira, precisamos definir um <colgroup> dentro da tabela, logo abaixo da tag <table>
-            
-            <table>
-                <colgroup>
-                    <col class= “c1”>
-                    <col class= “c2”>
-            <col class= “c3”>
-            <col class= “c1” span= “2”>
-            </colgroup>
-            
-            Isso vai atribuir uma classe a cada coluna, (ou conjunto de colunas, quando usamos SPAN) assim podemos destacar cada coluna individualmente no CSS
-            
+        </p>
+        <h4>Mesclagem de Cédulas</h4>
+        <p>
+            É necessário apenas que algumas células não existam mais para criar um espaço em branco, e referente a ele usaremos o SPAN inline <br>
+            rowspan=”nº” mesclagem de LINHAS, acontece VERTICALMENTE <br>
+            colspan=”nº” mesclagem de COLUNAS, acontece HORIZONTALMENTE
+        </p>
+        <table class="tex">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td rowspan="2">3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td colspan="3">8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td rowspan="2">10</td>
+                <td colspan="2">11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+        </table>
+        <h4>Escopos de Grupos</h4>
+        <p>
+            A W3C recomenda colocar escopos em TODOS os &lt;th&gt; para identificar os conteúdos das linhas individuais ou em grupo
+        </p>
+        <h4>Scope:</h4>
+        <ul>
+            <li>“COL” usado em th que separe COLUNAS no MESMO alinhamento</li>
+            <li>“COLGROUP” usado em th com grupos MESCLADOS no conteúdo</li>
+            <li>“ROW” usado em th que separa LINHAS no mesmo tr simples</li>
+            <li>“ROWGROUP” usado em th com linhas de conteúdo mesclado com a própria, e outros tr</li>
+        </ul>
+        <h4>Personalizando Colunas</h4>
+        <p>
+            Para conseguir selecionar uma coluna inteira, precisamos definir um &lt;colgroup&gt; dentro da tabela, logo abaixo da tag &lt;table&gt;
+        </p>
+        <pre><code>
+            &lt;table&gt;
+                &lt;colgroup&gt;
+                    &lt;col class= “c1”&gt;
+                    &lt;col class= “c2”&gt;
+                    &lt;col class= “c3”&gt;
+                    &lt;col class= “c1” span= “2”&gt;
+                &lt;/colgroup&gt;
+        </code></pre>
+        <p>
+            Isso vai atribuir uma classe a cada coluna, (ou conjunto de colunas, quando usamos SPAN) assim podemos destacar cada coluna individualmente no CSS.
+        </p>
+        <pre><code>
             col.c1 {
                 Background-color: #E3C386;
             }
@@ -943,28 +998,76 @@
             col.c3 {
                 background-color: #AC7C24;
             }
-            O resultado acima se aplica devido a primeira e última <col> receberem a mesma classe configurada
-            
-            TABELAS LARGAS E RESPONSIVAS
-            
+        </code></pre>
+        <table>
+            <colgroup>
+                <col class="c1"></col>
+                <col class="c2"></col>
+                <col class="c3"></col>
+                <col class="c1" span="2"></col>
+            </colgroup>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+            </tr>
+        </table>
+        <p>
+            O resultado acima se aplica devido a primeira e última &lt;col&gt; receberem a mesma classe configurada
+        </p>
+        <h4>Tabelas largas e responsivas</h4>
+        <p>
             Para resolver a limitação de uma tabela mais larga que o previsto, basta envelopar ela dentro de uma <div> e configurar a tag no CSS com Class ou id a propriedade OVERFLOW-X: AUTO ou SCROLL, assim, todo conteúdo que transborde a página ficará contido na caixa com barra de rolagem apenas nela.
-            
-            IFRAMES
-            Os iframes são quadros ou “inline frames” são janelas abertas que já vem com uma configuração prévia, desde nos permitir vídeos no nosso HTML ou até uma página inteira
-            
-            O <iframe> vem com tamanho padrão de 300x150 px, caso alguma alteração seja feita, a configuração que irá se sobrepor a tudo, será o CSS
-            
+        </p>
+        <h3>17.Iframes</h3>
+        <p>
+            Os iframes são quadros ou “inline frames” são janelas abertas que já vem com uma configuração prévia, desde nos permitir vídeos no nosso HTML ou até uma página inteira.
+        </p>
+        <p>
+            O &lt;iframe&gt; vem com tamanho padrão de 300x150 px, caso alguma alteração seja feita, a configuração que irá se sobrepor a tudo, será o CSS
+        </p>
+        <h4>Scrolling</h4>
+        <p>
             Existe o parâmetro SCROLLING= “yes / no / auto” para definir se o quadro terá rolagem, mas nem todo navegador funciona.
-            
-            FRAMEBORDER
-            somente aceita os valores 0 e 1, para criar uma borda na janela, caso queira configurar a borda no iframe, utilize a função border no CSS
-            
-            GERANDO CONTEÚDO NO IFRAME
+        </p>
+        <h4>Frameborder</h4>
+        <p>
+            Somente aceita os valores 0 e 1, para criar uma borda na janela, caso queira configurar a borda no iframe, utilize a função border no CSS.
+        </p>
+        <h4>Gerando conteúdo no Iframe</h4>
+        <p>
             É possível colocar páginas locais dentro do iframe, e além do SRC, é possível utilizar o SRCDOC para gerar uma página inicial estática dentro do iframe.
-            
-            PERSONALIZANDO IFRAME VIA CSS
-            Todo iframe é uma caixa em linha, então dá pra ser personalizado com o mesmo princípio e comportamento
-            
+        </p>
+        <h4>Personalizando Iframe via CSS</h4>
+        <p>
+            Todo iframe é uma caixa em linha, então dá pra ser personalizado com o mesmo princípio e comportamento.
+        </p>
+        <pre><code>
             iframe{
                 width= “500px”;
                 height= “500px”;
@@ -972,6 +1075,9 @@
                 border-radius= “15px”;
                 box-shadow= “3px 3px 10px #0000006C;
             }
+        </code></pre>
+        <!--
+            
             
             DIRECIONANDO NOVO CONTEÚDO PARA IFRAME
             Podemos fazer o iframe trocar seu conteúdo exibido utilizando links ou códigos javascript na página. O primeiro passo é dar ao iframe um nome com o parâmetro NAME.
